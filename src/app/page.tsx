@@ -22,7 +22,6 @@ export default function Home() {
           />
         </div>
       </header>
-
       {/* Main Content */}
       <main className="container mx-auto p-4">
         <h1 className="text-4xl font-bold mb-4">Welcome to Tar App</h1>
