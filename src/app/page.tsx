@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { ProfileButton, MessageButton, DayInfoButton } from "@/app/timeverse";
-import timeverseIcon from "@public/timeverse.svg";
+import { ConnectButton } from "@/app/thirdweb";
+import thirdwebIcon from "@public/thirdweb.svg";
 import { client } from "./client";
 
 export default function Home() {
