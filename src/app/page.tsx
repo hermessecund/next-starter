@@ -30,8 +30,19 @@ export default function Home() {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel
           risus nec ante congue lobortis nec sit amet urna.
         </p>
+        {/* Rendering UsersProfiles component */}
         <UsersProfiles />
       </main>
+
+      {/* Footer */}
+      <footer className="p-4 bg-gray-200 text-center">
+        &copy; 2024 Tar App. All rights reserved.
+      </footer>
+    </div>
+  );
+}
+
+// Define UsersProfiles outside of the Home component
 function UsersProfiles() {
   return (
     <div className="grid gap-4 lg:grid-cols-3 justify-center">
@@ -56,6 +67,7 @@ function UsersProfiles() {
   );
 }
 
+// Define ArticleCard component outside of the Home component
 function ArticleCard(props: { title: string; onClick: () => void; description: string; }) {
   return (
     <button
@@ -70,6 +82,7 @@ function ArticleCard(props: { title: string; onClick: () => void; description: s
   );
 }
 
+// Define createProfile, createMessage, and setDayInfo functions
 function createProfile() {
   // Your logic for creating a profile
 }
@@ -80,12 +93,4 @@ function createMessage() {
 
 function setDayInfo() {
   // Your logic for setting day info
-}
-
-      {/* Footer */}
-      <footer className="p-4 bg-gray-200 text-center">
-        &copy; 2024 Tar App. All rights reserved.
-      </footer>
-    </div>
-  );
 }
