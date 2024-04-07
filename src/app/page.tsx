@@ -5,8 +5,14 @@ import { client } from "./client";
 
 export default function Home() {
   return (
-    <main className="p-4 pb-10 min-h-[100vh] flex items-center justify-center container max-w-screen-lg mx-auto">
-        <div className="flex justify-center mt-10">
+    <div>
+      {/* Header */}
+      <header className="flex justify-between items-center p-4">
+        <div>
+          <Image src={thirdwebIcon} alt="Thirdweb Icon" />
+        </div>
+        <div>
+          {/* Connect Button */}
           <ConnectButton
             client={client}
             appMetadata={{
@@ -15,6 +21,21 @@ export default function Home() {
             }}
           />
         </div>
-    </main>
+      </header>
+
+      {/* Main Content */}
+      <main className="container mx-auto p-4">
+        <h1 className="text-4xl font-bold mb-4">Welcome to Tar App</h1>
+        <p className="text-lg">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel
+          risus nec ante congue lobortis nec sit amet urna.
+        </p>
+      </main>
+
+      {/* Footer */}
+      <footer className="p-4 bg-gray-200 text-center">
+        &copy; 2024 Tar App. All rights reserved.
+      </footer>
+    </div>
   );
 }
