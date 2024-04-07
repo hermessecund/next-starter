@@ -1,9 +1,18 @@
 import Image from "next/image";
-import { ConnectButton } from "@/app/thirdweb";
+import { useState } from "react";
 import thirdwebIcon from "@public/thirdweb.svg";
 import { client } from "./client";
 
 export default function Home() {
+  // State for profile creation
+  const [profileCreated, setProfileCreated] = useState(false);
+
+  // Function to handle profile creation
+  const handleCreateProfile = () => {
+    // Implementation for creating profile
+    setProfileCreated(true);
+  };
+
   return (
     <div>
       {/* Header */}
@@ -11,7 +20,7 @@ export default function Home() {
         <div>
           <Image src={thirdwebIcon} alt="Thirdweb Icon" />
         </div>
-        <div>
+         <div>
           {/* Connect Button */}
           <ConnectButton
             client={client}
@@ -21,15 +30,32 @@ export default function Home() {
             }}
           />
         </div>
+        <div>
+          {/* Connect Button */}
+          <button onClick={handleCreateProfile} className="text-white bg-blue-500 px-4 py-2 rounded-md">
+            Create Profile
+          </button>
+        </div>
       </header>
 
       {/* Main Content */}
       <main className="container mx-auto p-4">
         <h1 className="text-4xl font-bold mb-4">Welcome to the Timeverse</h1>
-        <p className="text-lg">
-Embark on an extraordinary journey through time with us. Start by creating your profile and unlocking a world of possibilities.
-          Discover your birthdate value and delve deeper into the Timeverse, where every moment is unique and significant.
-        </p>
+        <div className="text-lg">
+          {profileCreated ? (
+            <div>
+              {/* Display Welcome Message */}
+              <p>Welcome back! Your profile has been successfully created.</p>
+              <p>Discover your birthdate value and delve deeper into the Timeverse, where every moment is unique and significant.</p>
+            </div>
+          ) : (
+            <div>
+              {/* Display Default Message */}
+              <p>Embark on an extraordinary journey through time with us. Start by creating your profile and unlocking a world of possibilities.</p>
+              <p>Discover your birthdate value and delve deeper into the Timeverse, where every moment is unique and significant.</p>
+            </div>
+          )}
+        </div>
       </main>
 
       {/* Footer */}
