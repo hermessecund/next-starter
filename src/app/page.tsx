@@ -30,7 +30,57 @@ export default function Home() {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel
           risus nec ante congue lobortis nec sit amet urna.
         </p>
+        <UsersProfiles />
       </main>
+function UsersProfiles() {
+  return (
+    <div className="grid gap-4 lg:grid-cols-3 justify-center">
+      <ArticleCard
+        title="Create Profile"
+        onClick={createProfile}
+        description="Create a new user profile on Thirdweb."
+      />
+
+      <ArticleCard
+        title="Create Message"
+        onClick={createMessage}
+        description="Compose a new message on Thirdweb."
+      />
+
+      <ArticleCard
+        title="Set Day Info"
+        onClick={setDayInfo}
+        description="Set daily information updates on Thirdweb."
+      />
+    </div>
+  );
+}
+
+function ArticleCard(props: { title: string; onClick: () => void; description: string; }) {
+  return (
+    <button
+      onClick={props.onClick}
+      className="flex flex-col border border-zinc-800 p-4 rounded-lg hover:bg-zinc-900 transition-colors hover:border-zinc-700"
+    >
+      <article>
+        <h2 className="text-lg font-semibold mb-2">{props.title}</h2>
+        <p className="text-sm text-zinc-400">{props.description}</p>
+      </article>
+    </button>
+  );
+}
+
+function createProfile() {
+  // Your logic for creating a profile
+}
+
+function createMessage() {
+  // Your logic for creating a message
+}
+
+function setDayInfo() {
+  // Your logic for setting day info
+}
 
       {/* Footer */}
       <footer className="p-4 bg-gray-200 text-center">
