@@ -2,11 +2,6 @@ import Link from "next/link";
 
 export default function NavLinks() {
   return (
-  <!--
-// v0 by Vercel.
-// https://v0.dev/t/UtUW5qV616w
--->
-
 <nav class="flex flex-col h-[calc(100vh-4rem)] w-16 min-h-[400px] border-r border-gray-200 px-2 py-4 shrink-0 gap-4 md:flex-row md:w-64 xl:w-80/60 2xl:w-96/60 border-gray-200 dark:border-gray-800">
   <div class="flex items-center space-y-0.5">
     <a class="flex w-full items-center" href="#">
