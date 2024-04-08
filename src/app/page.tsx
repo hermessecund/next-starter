@@ -1,6 +1,7 @@
 'use client'
 import Image from "next/image";
 import { client, useSidebarState } from "./client";
+import React, { useState } from 'react';
 import thirdwebIcon from "@public/thirdweb.svg";
 import { ConnectButton } from "@/app/thirdweb";
 
