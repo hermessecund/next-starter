@@ -1,7 +1,6 @@
 'use client'
-import Image from "next/image";
-import { client, useSidebarState } from "./client";
 import React, { useState } from 'react';
+import Image from "next/image";
 import thirdwebIcon from "@public/thirdweb.svg";
 import { ConnectButton } from "@/app/thirdweb";
 
@@ -13,13 +12,13 @@ export default function Home() {
     };
 
     return (
-        <div className="relative min-h-screen">
+        <div className="relative">
             {/* Header */}
-            <header className={`flex justify-between items-center p-4 bg-gray-900 text-white transition-all duration-300 ${expandedHeader ? 'h-1/2 w-full' : 'h-16'}`}>
-                <div className="cursor-pointer" onClick={toggleHeaderExpansion}>
+            <header className={`flex justify-between items-center p-4 ${expandedHeader ? 'w-full h-1/2' : 'h-16'}`}>
+                <div className="absolute top-0 left-0">
                     <Image src={thirdwebIcon} alt="Thirdweb Icon" />
                 </div>
-                <div>
+                <div className="absolute top-0 right-0">
                     {/* Connect Button */}
                     <ConnectButton
                         client={client}
@@ -32,23 +31,26 @@ export default function Home() {
             </header>
 
             {/* Main Content */}
-            <main className="p-4 overflow-y-auto">
+            <main className="container mx-auto p-4">
                 {/* Responsive iframe */}
-                <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', maxWidth: '100%' }}>
-                    <iframe
-                        src="https://harmonysegment.com/"
-                        frameBorder="0"
-                        allowFullScreen
-                        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-                    ></iframe>
+                <div className={`relative ${expandedHeader ? 'mt-16' : 'mt-0'}`}>
+                    <div className="rounded-lg overflow-hidden aspect-w-16 aspect-h-9">
+                        <iframe
+                            src="https://harmonysegment.com/"
+                            frameBorder="0"
+                            allowFullScreen
+                            className="absolute inset-0 w-full h-full"
+                        ></iframe>
+                    </div>
                 </div>
             </main>
 
-            {/* Footer */}
-            <footer className="p-4 bg-gray-700 text-gray-200 text-center">
-                &copy; 2024 Tar App. All rights reserved.
-            </footer>
+            {/* Expand Header Button */}
+            <button className="fixed top-4 right-4 z-10 bg-blue-500 text-white px-4 py-2 rounded-md" onClick={toggleHeaderExpansion}>
+                {expandedHeader ? 'Collapse Header' : 'Expand Header'}
+            </button>
         </div>
     );
 }
+
 
