@@ -5,6 +5,7 @@ import Logo from "@public/logo.png";
 import { ConnectButton } from "@/app/thirdweb";
 import NavLinks from "./nav";
 import { useState } from 'react';
+import Icons from "./icons";
 
 
 export default function Header() {
@@ -18,6 +19,7 @@ export default function Header() {
 
     return (
         <div className="relative min-h-screen">
+            <Icons />
             {/* Header */}
             <header className="flex justify-between items-center p-4 bg-black text-white">
                 <div className="flex items-center">
@@ -43,47 +45,102 @@ export default function Header() {
             <main className="p-4 overflow-y-auto">
                 {/* Conditionally render NFT collections if connected */}
                 {connected && (
-                   
-<div className="bg-[#1a1a2e] min-h-screen flex flex-col items-center justify-center">
-  <div className="flex flex-wrap justify-center gap-8 p-4">
-    <div className="flex flex-col space-y-4">
-      <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-primary/90 h-10 px-4 py-2 bg-white text-black w-32">
-        lorem
-      </button>
-      <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-primary/90 h-10 px-4 py-2 bg-white text-black w-32">
-        lorem
-      </button>
-      <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-primary/90 h-10 px-4 py-2 bg-white text-black w-32">
-        lorem
-      </button>
+            
+<div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+  <div className="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+    <div className="flex flex-col space-y-1.5 p-6 rounded-xl">
+      <div className="flex items-center space-x-4">
+        <img
+          src="/placeholder.svg"
+          width="64"
+          height="64"
+          alt="NFT"
+          className="rounded-full"
+          style="aspect-ratio: 64 / 64; object-fit: cover;"
+        />
+        <div className="grid gap-0.5">
+          <h3 className="whitespace-nowrap font-semibold tracking-tight text-base">Cosmic Gateway Collection</h3>
+          <p className="text-muted-foreground text-sm">
+            The Cosmic Gateway Collection is a set of 10,000 unique intergalactic NFTs.
+          </p>
+        </div>
+      </div>
+      <h3 className="whitespace-nowrap font-semibold tracking-tight text-2xl">$CGC</h3>
+      <p className="text-muted-foreground text-sm">Supply: 3,214 / 10,000</p>
     </div>
-    <div className="rounded-full bg-white w-48 h-48 flex items-center justify-center text-black cursor-pointer">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        className="w-6 h-6"
-      >
-        <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path>
-        <circle cx="12" cy="13" r="3"></circle>
-      </svg>
+    <div className="p-0">
+      <img
+        src="/placeholder.svg"
+        width="300"
+        height="300"
+        alt="NFT"
+        className="rounded-b-xl object-cover"
+        style="aspect-ratio: 300 / 300; object-fit: cover;"
+      />
     </div>
-    <div className="flex flex-col space-y-4">
-      <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-primary/90 h-10 px-4 py-2 bg-white text-black w-32">
-        lorem
-      </button>
-      <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-primary/90 h-10 px-4 py-2 bg-white text-black w-32">
-        lorem
-      </button>
-      <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-primary/90 h-10 px-4 py-2 bg-white text-black w-32">
-        lorem
-      </button>
+  </div>
+  <div className="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+    <div className="flex flex-col space-y-1.5 p-6 rounded-xl">
+      <div className="flex items-center space-x-4">
+        <img
+          src="/placeholder.svg"
+          width="64"
+          height="64"
+          alt="NFT"
+          className="rounded-full"
+          style="aspect-ratio: 64 / 64; object-fit: cover;"
+        />
+        <div className="grid gap-0.5">
+          <h3 className="whitespace-nowrap font-semibold tracking-tight text-base">EtherLegends Collection</h3>
+          <p className="text-muted-foreground text-sm">
+            The EtherLegends Collection consists of 8,888 digital collectibles inspired by mythology and folklore.
+          </p>
+        </div>
+      </div>
+      <h3 className="whitespace-nowrap font-semibold tracking-tight text-2xl">$LEGENDS</h3>
+      <p className="text-muted-foreground text-sm">Supply: 8,212 / 8,888</p>
+    </div>
+    <div className="p-0">
+      <img
+        src="/placeholder.svg"
+        width="300"
+        height="300"
+        alt="NFT"
+        className="rounded-b-xl object-cover"
+        style="aspect-ratio: 300 / 300; object-fit: cover;"
+      />
+    </div>
+  </div>
+  <div className="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+    <div className="flex flex-col space-y-1.5 p-6 rounded-xl">
+      <div className="flex items-center space-x-4">
+        <img
+          src="/placeholder.svg"
+          width="64"
+          height="64"
+          alt="NFT"
+          className="rounded-full"
+          style="aspect-ratio: 64 / 64; object-fit: cover;"
+        />
+        <div className="grid gap-0.5">
+          <h3 className="whitespace-nowrap font-semibold tracking-tight text-base">PixelPals Collection</h3>
+          <p className="text-muted-foreground text-sm">
+            The PixelPals Collection features 5,000 algorithmically generated pixel art characters.
+          </p>
+        </div>
+      </div>
+      <h3 className="whitespace-nowrap font-semibold tracking-tight text-2xl">$PPC</h3>
+      <p className="text-muted-foreground text-sm">Supply: 1,789 / 5,000</p>
+    </div>
+    <div className="p-0">
+      <img
+        src="/placeholder.svg"
+        width="300"
+        height="300"
+        alt="NFT"
+        className="rounded-b-xl object-cover"
+        style="aspect-ratio: 300 / 300; object-fit: cover;"
+      />
     </div>
   </div>
 </div>
