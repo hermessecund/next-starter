@@ -20,12 +20,9 @@ export default function Header() {
                 <div className="flex items-center">
                     <button onClick={toggleNavLinks} className="mr-4 focus:outline-none">
                         {/* Small logo */}
-                        <Image src={Logo} alt="Logo" width={52} height={52} />
+                        <Image src={Logo} alt="Logo" width={102} height={102} />
                     </button>
-                    {/* NFT - Token Button */}
-                    <button className="text-white bg-gray-100 px-4 py-2 rounded-md mr-4">
-                        NFT - Token
-                    </button>
+              
                 </div>
                 <div className="flex space-x-4">
                     {/* Connect Button */}
