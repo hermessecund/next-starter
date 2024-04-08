@@ -12,8 +12,8 @@ export default function Home() {
     return (
         <div>
             {/* Header */}
-            <header className="flex justify-between items-center p-4">
-                <div onClick={toggleSidebar}>
+            <header className="flex justify-between items-center p-4 cursor-pointer" onClick={toggleSidebar}>
+                <div>
                     <Image src={thirdwebIcon} alt="Thirdweb Icon" />
                 </div>
                 <div>
@@ -28,21 +28,21 @@ export default function Home() {
                 </div>
             </header>
 
-            {/* Sidebar */}
-             <NavLinks />
+            {/* Render NavLinks only if sidebar is visible */}
+            {sidebarVisible && <NavLinks />}
 
             {/* Main Content */}
-     <main className={`container mx-auto p-4 ${sidebarVisible ? 'ml-48' : ''}`}>
-    {/* Responsive iframe */}
-    <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', maxWidth: '100%' }}>
-        <iframe
-            src="https://harmonysegment.com/"
-            frameBorder="0"
-            allowFullScreen
-            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-        ></iframe>
-    </div>
-</main>
+            <main className={`container mx-auto p-4 ${sidebarVisible ? 'ml-48' : ''}`}>
+                {/* Responsive iframe */}
+                <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', maxWidth: '100%' }}>
+                    <iframe
+                        src="https://harmonysegment.com/"
+                        frameBorder="0"
+                        allowFullScreen
+                        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                    ></iframe>
+                </div>
+            </main>
 
             {/* Footer */}
             <footer className="p-4 bg-gray-700 text-gray-200 text-center">
