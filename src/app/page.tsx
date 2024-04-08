@@ -1,3 +1,5 @@
+'use client'
+
 import Image from "next/image";
 import { client, useSidebarState } from "./client";
 import thirdwebIcon from "@public/thirdweb.svg";
