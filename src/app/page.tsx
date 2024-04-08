@@ -4,6 +4,7 @@ import { client, useSidebarState } from "./client";
 import Logo from "@public/logo.png";
 import { ConnectButton } from "@/app/thirdweb";
 import NavLinks from "./nav";
+import { useState } from 'react';
 
 export default function Header() {
     const [showNavLinks, setShowNavLinks] = useState(false);
