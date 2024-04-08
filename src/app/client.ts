@@ -9,7 +9,7 @@ if (!clientId) {
 
 // State to track sidebar visibility
 export const useSidebarState = () => {
-    const [sidebarVisible, setSidebarVisible] = useState(true);
+    const [sidebarVisible, setSidebarVisible] = useState(false);
 
     // Function to toggle sidebar visibility
     const toggleSidebar = () => {
