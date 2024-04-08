@@ -1,5 +1,6 @@
 import { createThirdwebClient } from 'thirdweb';
 import { useState } from 'react';
+import NavLinks from './nav'; // Import NavLinks component
 
 const clientId = process.env.NEXT_PUBLIC_TEMPLATE_CLIENT_ID;
 
