@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-export default function Component() {
+export default function Icons() {
   return (
     <div className="h-screen w-16 flex flex-col items-stretch border-r px-2 overflow-hidden">
       <div className="flex-1 flex items-center justify-center">
