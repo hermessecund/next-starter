@@ -31,21 +31,11 @@ export default function Home() {
 
             {/* Main Content */}
             <main className="p-4 overflow-y-auto">
-                {/* Responsive iframe with rounded corners */}
-                  <div className="rounded-md overflow-hidden">
-                    <div style={{ position: 'relative', paddingBottom: '5%', height: '100%', overflow: 'hidden', maxWidth: '100%' }}>
-                        <iframe
-                            src="https://harmonysegment.com/"
-                            frameBorder="0"
-                            allowFullScreen
-                            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-                        ></iframe>
-                    </div>
-                </div>
+               
             </main>
 
             {/* Footer */}
-            <footer className="p-4 bg-gray-700 text-gray-200 text-center">
+            <footer className="p-4 mb-0 bg-gray-700 text-gray-200 text-center">
                 &copy; 2024 Tar App. All rights reserved.
             </footer>
         </div>
