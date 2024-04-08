@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image";
-import { client } from "./client";
+import { client, useSidebarState } from "./client";
 import Logo from "@public/logo.png";
 import { ConnectButton } from "@/app/thirdweb";
 import NavLinks from "./nav";
