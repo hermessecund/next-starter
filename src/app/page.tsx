@@ -3,7 +3,6 @@ import { useClient } from "@react-client";
 import { useSidebarState, client } from "./client";
 import thirdwebIcon from "@public/thirdweb.svg";
 import { ConnectButton } from "@/app/thirdweb";
-
 export default function Home() {
   const ClientHome = useClient(() => {
     const { sidebarVisible, toggleSidebar } = useSidebarState();
