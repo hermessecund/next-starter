@@ -3,16 +3,19 @@ import Image from "next/image";
 import { client, useSidebarState } from "./client";
 import thirdwebIcon from "@public/thirdweb.svg";
 import { ConnectButton } from "@/app/thirdweb";
-import NavLinks from "./nav";
 
 export default function Home() {
-    const { sidebarVisible, toggleSidebar } = useSidebarState();
+    const [expandedHeader, setExpandedHeader] = useState(false);
+
+    const toggleHeaderExpansion = () => {
+        setExpandedHeader(!expandedHeader);
+    };
 
     return (
         <div className="relative min-h-screen">
             {/* Header */}
-            <header className="flex justify-between items-center p-4 bg-gray-900 text-white">
-                <div className="cursor-pointer" onClick={toggleSidebar}>
+            <header className={`flex justify-between items-center p-4 bg-gray-900 text-white transition-all duration-300 ${expandedHeader ? 'h-1/2 w-full' : 'h-16'}`}>
+                <div className="cursor-pointer" onClick={toggleHeaderExpansion}>
                     <Image src={thirdwebIcon} alt="Thirdweb Icon" />
                 </div>
                 <div>
@@ -26,11 +29,6 @@ export default function Home() {
                     />
                 </div>
             </header>
-
-            {/* Sidebar */}
-            <aside className={`bg-transparent text-white w-64 absolute top-0 left-0 h-full overflow-y-auto transition-transform duration-300 transform ${sidebarVisible ? 'translate-x-0' : '-translate-x-full'}`}>
-                <NavLinks />
-            </aside>
 
             {/* Main Content */}
             <main className="p-4 overflow-y-auto">
