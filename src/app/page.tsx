@@ -40,13 +40,23 @@ export default function Home() {
             )}
 
             {/* Main Content */}
-            <main className={`container mx-auto p-4 ${sidebarVisible ? 'ml-48' : ''}`}>
-                <h1 className="text-4xl font-bold mb-4">Welcome to the Timeverse</h1>
-                <p className="text-lg">
-                    Embark on an extraordinary journey through time with us. Start by creating your profile and unlocking a world of possibilities.
-                    Discover your birthdate value and delve deeper into the Timeverse, where every moment is unique and significant.
-                </p>
-            </main>
+     <main className={`container mx-auto p-4 ${sidebarVisible ? 'ml-48' : ''}`}>
+    <h1 className="text-4xl font-bold mb-4">Welcome to the Timeverse</h1>
+    <p className="text-lg">
+        Embark on an extraordinary journey through time with us. Start by creating your profile and unlocking a world of possibilities.
+        Discover your birthdate value and delve deeper into the Timeverse, where every moment is unique and significant.
+    </p>
+
+    {/* Responsive iframe */}
+    <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', maxWidth: '100%' }}>
+        <iframe
+            src="https://harmonysegment.com/"
+            frameBorder="0"
+            allowFullScreen
+            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+        ></iframe>
+    </div>
+</main>
 
             {/* Footer */}
             <footer className="p-4 bg-gray-700 text-gray-200 text-center">
