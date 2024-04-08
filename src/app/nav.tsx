@@ -213,12 +213,14 @@ export default function NavLinks() {
   );
 }
 
-function NavLink({ href, children }) {
+
+function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
     <Link href={href}>
-      <a classNameName="inline-flex h-9 w-max items-center justify-center rounded-md bg-gray-100 px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100/50 focus:bg-gray-100/50 focus:outline-none">
+      <a className="inline-flex h-9 w-max items-center justify-center rounded-md bg-gray-100 px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100/50 focus:bg-gray-100/50 focus:outline-none">
         {children}
       </a>
     </Link>
   );
 }
+
