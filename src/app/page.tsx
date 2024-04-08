@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { client, useSidebarState } from "./client";
+import NavLinks from "./nav";
 import thirdwebIcon from "@public/thirdweb.svg";
 import { ConnectButton } from "@/app/thirdweb";
 
@@ -28,25 +29,10 @@ export default function Home() {
             </header>
 
             {/* Sidebar */}
-            {sidebarVisible && (
-                <aside className="bg-gray-200 h-screen w-48 fixed top-0 left-0 flex flex-col items-center justify-center">
-                    {/* Sidebar Content */}
-                    <ul>
-                        <li>Link 1</li>
-                        <li>Link 2</li>
-                        <li>Link 3</li>
-                    </ul>
-                </aside>
-            )}
+             <NavLinks />
 
             {/* Main Content */}
      <main className={`container mx-auto p-4 ${sidebarVisible ? 'ml-48' : ''}`}>
-    <h1 className="text-4xl font-bold mb-4">Welcome to the Timeverse</h1>
-    <p className="text-lg">
-        Embark on an extraordinary journey through time with us. Start by creating your profile and unlocking a world of possibilities.
-        Discover your birthdate value and delve deeper into the Timeverse, where every moment is unique and significant.
-    </p>
-
     {/* Responsive iframe */}
     <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', maxWidth: '100%' }}>
         <iframe
