@@ -1,7 +1,7 @@
 'use client'
 import Image from "next/image";
 import { client } from "./client";
-import thirdwebIcon from "@public/thirdweb.svg";
+import Logo from "@public/logo.png";
 import { ConnectButton } from "@/app/thirdweb";
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
             {/* Header */}
             <header className="flex justify-between items-center p-4 bg-gray-900 text-white">
                 <div>
-                    <Image src={thirdwebIcon} alt="Thirdweb Icon" />
+                    <Image src={Logo} alt="Logo" />
                 </div>
                     {/* NFT - Token Button */}
                     <button className="text-white bg-gray-200 px-4 py-2 rounded-md">
@@ -32,8 +32,8 @@ export default function Home() {
             {/* Main Content */}
             <main className="p-4 overflow-y-auto">
                 {/* Responsive iframe with rounded corners */}
-                  <div className="rounded-md overflow-hidden" style={{ height: 'calc(100vh - 4rem)' }}>
-                    <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', maxWidth: '100%' }}>
+                  <div className="rounded-md overflow-hidden">
+                    <div style={{ position: 'relative', paddingBottom: '5%', height: '100%', overflow: 'hidden', maxWidth: '100%' }}>
                         <iframe
                             src="https://harmonysegment.com/"
                             frameBorder="0"
