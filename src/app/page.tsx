@@ -26,7 +26,7 @@ export default function Header() {
                         <Image src={Logo} alt="Logo" width={102} height={102} />
                     </button>
                 </div>
-                <div className="flex space-x-4">
+                <div className="flex text-sm px-2 py-1 rounded-md space-x-4">
                     {/* Render Connect Button */}
                     <ConnectButton
                         client={client}
@@ -35,7 +35,6 @@ export default function Header() {
                             url: "https://tarwar.com",
                         }}
                         onConnect={handleConnect}
-                        className="text-sm px-2 py-1 rounded-md"
                     />
                 </div>
             </header>
