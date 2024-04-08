@@ -16,14 +16,14 @@ export default function Header() {
     return (
         <div className="relative min-h-screen">
             {/* Header */}
-            <header className="flex justify-between items-center p-4 bg-gray-900 text-white">
+            <header className="flex justify-between items-center p-4 bg-black text-white">
                 <div className="flex items-center">
                     <button onClick={toggleNavLinks} className="mr-4 focus:outline-none">
                         {/* Small logo */}
-                        <Image src={Logo} alt="Logo" width={32} height={32} />
+                        <Image src={Logo} alt="Logo" width={52} height={52} />
                     </button>
                     {/* NFT - Token Button */}
-                    <button className="text-white bg-gray-200 px-4 py-2 rounded-md mr-4">
+                    <button className="text-white bg-gray-100 px-4 py-2 rounded-md mr-4">
                         NFT - Token
                     </button>
                 </div>
