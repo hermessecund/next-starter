@@ -12,7 +12,7 @@ export default function Home() {
                 <div>
                     <Image src={thirdwebIcon} alt="Thirdweb Icon" />
                 </div>
-                <div>
+                <div className="flex space-x-4">
                     {/* Connect Button */}
                     <ConnectButton
                         client={client}
@@ -21,13 +21,21 @@ export default function Home() {
                             url: "https://tarwar.com",
                         }}
                     />
+                    {/* NFT - Token Button */}
+                    <button className="text-white bg-blue-500 px-4 py-2 rounded-md">
+                        NFT - Token
+                    </button>
+                    {/* TOS Button */}
+                    <button className="text-white bg-blue-500 px-4 py-2 rounded-md">
+                        TOS
+                    </button>
                 </div>
             </header>
 
             {/* Main Content */}
             <main className="p-4 overflow-y-auto">
                 {/* Responsive iframe with rounded corners */}
-                <div className="rounded-md overflow-hidden">
+                  <div className="rounded-md overflow-hidden" style={{ height: 'calc(100vh - 4rem)' }}>
                     <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', maxWidth: '100%' }}>
                         <iframe
                             src="https://harmonysegment.com/"
