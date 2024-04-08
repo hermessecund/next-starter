@@ -12,6 +12,11 @@ export default function Home() {
                 <div>
                     <Image src={thirdwebIcon} alt="Thirdweb Icon" />
                 </div>
+                    {/* NFT - Token Button */}
+                    <button className="text-white bg-gray-200 px-4 py-2 rounded-md">
+                        NFT - Token
+                    </button>
+                   
                 <div className="flex space-x-4">
                     {/* Connect Button */}
                     <ConnectButton
@@ -21,14 +26,6 @@ export default function Home() {
                             url: "https://tarwar.com",
                         }}
                     />
-                    {/* NFT - Token Button */}
-                    <button className="text-white bg-blue-500 px-4 py-2 rounded-md">
-                        NFT - Token
-                    </button>
-                    {/* TOS Button */}
-                    <button className="text-white bg-blue-500 px-4 py-2 rounded-md">
-                        TOS
-                    </button>
                 </div>
             </header>
 
