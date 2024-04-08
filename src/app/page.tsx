@@ -27,17 +27,16 @@ export default function Header() {
                     </button>
                 </div>
                 <div className="flex space-x-4">
-                    {/* Conditionally render Connect Button */}
-                    {!connected && (
-                        <ConnectButton
-                            client={client}
-                            appMetadata={{
-                                name: "Tar App",
-                                url: "https://tarwar.com",
-                            }}
-                            onConnect={handleConnect}
-                        />
-                    )}
+                    {/* Render Connect Button */}
+                    <ConnectButton
+                        client={client}
+                        appMetadata={{
+                            name: "Tar App",
+                            url: "https://tarwar.com",
+                        }}
+                        onConnect={handleConnect}
+                        className="text-sm px-2 py-1 rounded-md"
+                    />
                 </div>
             </header>
 
