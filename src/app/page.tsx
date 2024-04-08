@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Image from "next/image";
 import thirdwebIcon from "@public/thirdweb.svg";
 import { ConnectButton } from "@/app/thirdweb";
+import { client } from "./client"; // Import client here
 
 export default function Home() {
     const [expandedHeader, setExpandedHeader] = useState(false);
@@ -21,7 +22,7 @@ export default function Home() {
                 <div className="absolute top-0 right-0">
                     {/* Connect Button */}
                     <ConnectButton
-                        client={client}
+                        client={client} // Use the imported client here
                         appMetadata={{
                             name: "Tar App",
                             url: "https://tarwar.com",
@@ -52,5 +53,4 @@ export default function Home() {
         </div>
     );
 }
-
 
