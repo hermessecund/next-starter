@@ -8,14 +8,14 @@ import { useState, useEffect } from 'react';
 import Icons from "./icons";
 import LiveClock from 'react-live-clock';
 import Calendar from 'react-calendar';
-import TimezoneSelect from 'react-timezone-select';
+
 
 
 
 export default function Header() {
     const [connected, setConnected] = useState(false);
     const [date, setDate] = useState(new Date());
-     const [timezone, setTimezone] = useState('Asia/Kolkata');
+    
     const [dateFormat, setDateFormat] = useState('yyyy-MM-dd'); // Default date format
 
     
@@ -49,22 +49,7 @@ export default function Header() {
                     <div className="mr-4">
                         <LiveClock format={'HH:mm:ss'} ticking timezone={timezone} />
                     </div>
-                    {/* Timezone Selector */}
-<TimezoneSelect
-    value={timezone}
-    onChange={(selectedTimezone) => {
-        // Log the selectedTimezone object to inspect its structure
-        console.log(selectedTimezone);
-
-        // Update the timezone state with the correct property
-        const newTimezone = selectedTimezone?.value; // Use the correct property name here
-        
-        // Check if newTimezone is defined before updating the state
-        if (newTimezone) {
-            setTimezone(newTimezone);
-        }
-    }}
-/>
+                   
 
 
 
