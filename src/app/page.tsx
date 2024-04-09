@@ -27,6 +27,14 @@ export default function Header() {
                         {/* Small logo */}
                         <Image src={Logo} alt="Logo" width={102} height={102} />
                     </button>
+                    {/* Live Clock */}
+                    <div className="mr-4">
+                        <LiveClock format={'HH:mm:ss'} ticking timezone={'Asia/Kolkata'} />
+                    </div>
+                    {/* Calendar */}
+                    <div>
+                        <Calendar />
+                    </div>
                 </div>
                 <div className="flex text-sm px-2 py-1 rounded-md space-x-4">
                     {/* Render Connect Button */}
