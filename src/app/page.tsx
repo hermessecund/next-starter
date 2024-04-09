@@ -155,7 +155,7 @@ export default function Header() {
             </main>
 
             {/* Footer */}
-            <fooeter className="p-4 mb-0 bg-black text-gray-200 text-center">
+            <footer className="p-4 mb-0 bg-black text-gray-200 text-center">
               <iframe src="https://next-starter-rouge-five.vercel.app/days.html" title="Days Iframe" width="100%" height="300px" frameBorder="0"></iframe>
             </footer>
         </div>
