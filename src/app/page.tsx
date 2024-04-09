@@ -47,7 +47,7 @@ export default function Header() {
                     </button>
                    {/* Live Clock */}
                     <div className="mr-4">
-                        <LiveClock format={'HH:mm:ss'} ticking timezone={timezone} />
+                        <LiveClock format={'HH:mm:ss'} ticking />
                     </div>
                    
 
