@@ -1,113 +1,83 @@
 
 import React from 'react';
+import Link from "next/link"
 
 export default function Icons() {
   return (
-    <div className="h-screen w-16 flex flex-col items-stretch border-r px-2 overflow-hidden">
-      <div className="flex-1 flex items-center justify-center">
+    <div className="h-screen w-16 flex flex-col items-stretch border-r">
+      <Link className="flex-1" href="#">
         <img
           alt="Avatar"
-          className="rounded-full object-cover border-2 border-gray-100 w-10 h-10 dark:border-gray-850"
-          height={40}
+          className="aspect-square overflow-hidden rounded-full object-cover w-full"
+          height={48}
           src="/placeholder.svg"
-          style={{
-            aspectRatio: "40/40",
-            objectFit: "cover",
-          }}
-          width={40}
+          width={48}
         />
-      </div>
-      <div className="flex-1 flex items-center justify-center">
+      </Link>
+      <Link className="flex-1" href="#">
         <img
           alt="Avatar"
-          className="rounded-full object-cover border-2 border-gray-100 w-10 h-10 dark:border-gray-850"
-          height={40}
+          className="aspect-square overflow-hidden rounded-full object-cover w-full"
+          height={48}
           src="/placeholder.svg"
-          style={{
-            aspectRatio: "40/40",
-            objectFit: "cover",
-          }}
-          width={40}
+          width={48}
         />
-      </div>
-      <div className="flex-1 flex items-center justify-center">
+      </Link>
+      <Link className="flex-1" href="#">
         <img
           alt="Avatar"
-          className="rounded-full object-cover border-2 border-gray-100 w-10 h-10 dark:border-gray-850"
-          height={40}
+          className="aspect-square overflow-hidden rounded-full object-cover w-full"
+          height={48}
           src="/placeholder.svg"
-          style={{
-            aspectRatio: "40/40",
-            objectFit: "cover",
-          }}
-          width={40}
+          width={48}
         />
-      </div>
-      <div className="flex-1 flex items-center justify-center">
+      </Link>
+      <Link className="flex-1" href="#">
         <img
           alt="Avatar"
-          className="rounded-full object-cover border-2 border-gray-100 w-10 h-10 dark:border-gray-850"
-          height={40}
+          className="aspect-square overflow-hidden rounded-full object-cover w-full"
+          height={48}
           src="/placeholder.svg"
-          style={{
-            aspectRatio: "40/40",
-            objectFit: "cover",
-          }}
-          width={40}
+          width={48}
         />
-      </div>
-      <div className="flex-1 flex items-center justify-center">
+      </Link>
+      <Link className="flex-1" href="#">
         <img
           alt="Avatar"
-          className="rounded-full object-cover border-2 border-gray-100 w-10 h-10 dark:border-gray-850"
-          height={40}
+          className="aspect-square overflow-hidden rounded-full object-cover w-full"
+          height={48}
           src="/placeholder.svg"
-          style={{
-            aspectRatio: "40/40",
-            objectFit: "cover",
-          }}
-          width={40}
+          width={48}
         />
-      </div>
-      <div className="flex-1 flex items-center justify-center">
+      </Link>
+      <Link className="flex-1" href="#">
         <img
           alt="Avatar"
-          className="rounded-full object-cover border-2 border-gray-100 w-10 h-10 dark:border-gray-850"
-          height={40}
+          className="aspect-square overflow-hidden rounded-full object-cover w-full"
+          height={48}
           src="/placeholder.svg"
-          style={{
-            aspectRatio: "40/40",
-            objectFit: "cover",
-          }}
-          width={40}
+          width={48}
         />
-      </div>
-      <div className="flex-1 flex items-center justify-center">
+      </Link>
+      <Link className="flex-1" href="#">
         <img
           alt="Avatar"
-          className="rounded-full object-cover border-2 border-gray-100 w-10 h-10 dark:border-gray-850"
-          height={40}
+          className="aspect-square overflow-hidden rounded-full object-cover w-full"
+          height={48}
           src="/placeholder.svg"
-          style={{
-            aspectRatio: "40/40",
-            objectFit: "cover",
-          }}
-          width={40}
+          width={48}
         />
-      </div>
-      <div className="flex-1 flex items-center justify-center">
+      </Link>
+      <Link className="flex-1" href="#">
         <img
           alt="Avatar"
-          className="rounded-full object-cover border-2 border-gray-100 w-10 h-10 dark:border-gray-850"
-          height={40}
+          className="aspect-square overflow-hidden rounded-full object-cover w-full"
+          height={48}
           src="/placeholder.svg"
-          style={{
-            aspectRatio: "40/40",
-            objectFit: "cover",
-          }}
-          width={40}
+          width={48}
         />
-      </div>
+      </Link>
     </div>
   )
 }
+
