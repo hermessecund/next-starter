@@ -19,29 +19,30 @@ export default function Header() {
     return (
        <div className="relative min-h-screen">
             {/* Header */}
-            <header className="flex justify-between items-center p-4 bg-black text-white">
-                <div className="flex items-center">
-                    <button className="mr-4 focus:outline-none">
-                        {/* Small logo */}
-                        <Image src={Logo} alt="Logo" width={102} height={102} />
-                    </button>
-                    {/* Embedding iframe in the center */}
-                    <div className="flex-grow flex justify-center">
-                        <iframe src="https://next-starter-rouge-five.vercel.app/days.html" title="Days Iframe" width="100%" height="100px" frameBorder="0"></iframe>
-                    </div>
-                </div>
-                <div className="flex text-sm px-2 py-1 rounded-md space-x-4">
-                    {/* Render Connect Button */}
-                    <ConnectButton
-                        client={client}
-                        appMetadata={{
-                            name: "Tar App",
-                            url: "https://tarwar.com",
-                        }}
-                        onConnect={handleConnect}
-                    />
-                </div>
-            </header>
+          <header className="flex justify-between items-center p-4 bg-black text-white">
+            <div className="flex items-center">
+                <button className="mr-4 focus:outline-none">
+                    {/* Small logo */}
+                    <Image src={Logo} alt="Logo" width={102} height={102} />
+                </button>
+            </div>
+            {/* Embedding iframe in the center */}
+            <div className="flex-grow flex justify-center items-center"> {/* Added items-center */}
+                <iframe src="https://next-starter-rouge-five.vercel.app/days.html" title="Days Iframe" height="100" frameBorder="0" style={{ minWidth: "200px" }}></iframe>
+            </div>
+            <div className="flex text-sm px-2 py-1 rounded-md space-x-4">
+                {/* Render Connect Button */}
+                <ConnectButton
+                    client={client}
+                    appMetadata={{
+                        name: "Tar App",
+                        url: "https://tarwar.com",
+                    }}
+                    onConnect={handleConnect}
+                />
+            </div>
+        </header>
+
             {/* Main Content */}
             <main className="p-4 bg-black ">
     
