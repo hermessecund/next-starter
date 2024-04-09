@@ -24,7 +24,7 @@ export default function Header() {
       
 
     <header className="flex flex-col md:flex-row justify-center items-center p-4 bg-black text-white">
-              <iframe src="https://next-starter-rouge-five.vercel.app/days.html" title="Days Iframe" height="70" frameBorder="0" style={{ minWidth: "150px" }}></iframe>
+           
         <div className="flex items-center md:order-1">
             <button className="mr-4 focus:outline-none">
                 {/* Small logo */}
@@ -52,6 +52,7 @@ export default function Header() {
 
                 {/* Conditionally render NFT collections if connected */}
                 {connected && (
+              <iframe src="https://next-starter-rouge-five.vercel.app/days.html" title="Days Iframe" height="70" frameBorder="0" style={{ minWidth: "150px" }}></iframe>
                         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
                           <div className="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
                             <div className="flex flex-col space-y-1.5 p-6 rounded-xl">
