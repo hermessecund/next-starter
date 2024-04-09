@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Harmony Segment Clock </title>
+
+   <style type="text/css">
+<!--
+.style9 {color: #CC3300}
+.style10 {color: #33CC00}
+.style16 {color: #66FF33}
+-->
+   </style>
+   <head>
+<meta name="Classification" content="Horlogery Sale , AI, Blockchain, for Time 2.0 Project, Clock 12HS T-Watch">
+<meta name="KeyWords" content="Time 2.0 project - Simplified World Time 2.0 - Decentralized Time Network">
+<meta name="Description" content="Web3 VR Parallel world ">
+<meta name="copyright" content="Haromny Segment">
+<meta name="robots" content="INDEX, FOLLOW">
+<meta name="document-classification" content="Web3 Timeverse">
+<meta name="document-rating" content="CycleZero 2022-2052 - Clock Of Time 2.0 web3">
+
+ 
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+
+<script>
+    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+    } else {
+        document.documentElement.classList.remove('dark')
+    }
+</script>
+<style>
+    #Layer1 {
+	position:absolute;
+	width:50%;
+	height:70%;
+	top: 25%;
+	left:25%;
+}
+
+@media screen and (max-width: 414px) {
+
+#Layer1 {
+  position: absolute;
+  opacity: 1;
+  	width:100%;
+	height:100%;
+	top: 10%;
+	left:0%;
+}
+
+}
+</style>
+</head>
+
+<body class=" bg-black">
+
+<STRONG><div align="center" class="mx-auto max-w-[700px] mb-4 text-center text-4xl 
+font-extrabold text-2xl text-gray-100 md:text-x3" id="timeplay">Loading...</div></stong>
+
+<script>
+
+  // Decentralized time parameters
+  const CYCLE_DURATION = 933120000;
+  const CYCLE_ZERO_START = 1663912800;
+  const CYCLE_ZERO_END = CYCLE_ZERO_START + CYCLE_DURATION;
+  const CYCLE_HERO_START = CYCLE_ZERO_END;
+  const CYCLE_HERO_END = CYCLE_HERO_START + CYCLE_DURATION;
+  const D_WEEK_DURATION = 518400;
+  const D_MONTH_DURATION = D_WEEK_DURATION * 5;
+  const D_YEAR_DURATION = D_MONTH_DURATION * 12;
+  const BINUTE_DURATION = 120;
+  const HS_DURATION = BINUTE_DURATION * 60;
+  const DAY_DURATION = HS_DURATION * 12;
+
+  function updateTimeverseAge() {
+    const currentTime = Math.floor(Date.now() / 1000);
+    let decentralizedAge = 0;
+
+    if (currentTime < CYCLE_ZERO_START) {
+      decentralizedAge = 0;
+    } else if (currentTime >= CYCLE_ZERO_END && currentTime < CYCLE_HERO_START) {
+      decentralizedAge = CYCLE_DURATION;
+    } else {
+      decentralizedAge = currentTime - CYCLE_ZERO_START;
+    }
+
+    const cycle = Math.floor(decentralizedAge / CYCLE_DURATION);
+    const dYear = Math.floor(decentralizedAge / D_YEAR_DURATION);
+    const dMonth = Math.floor(decentralizedAge / D_MONTH_DURATION);
+    const dWeek = Math.floor(decentralizedAge / D_WEEK_DURATION);
+    const dDay = Math.floor(decentralizedAge / DAY_DURATION);
+
+    const hs = Math.floor((decentralizedAge % DAY_DURATION) / HS_DURATION);
+    const binute = Math.floor((decentralizedAge % HS_DURATION) / BINUTE_DURATION);
+    const seconds = decentralizedAge % BINUTE_DURATION;
+
+    const TimeverseAgeText = `${dDay}@${hs}:${binute}:${seconds}`;
+    document.getElementById('TimeverseAge').innerText = TimeverseAgeText;
+  }
+
+  // Update the TimeverseAge every second
+  setInterval(updateTimeverseAge, 1000);
+
+  // Initial call to set the initial TimeverseAge value
+  updateTimeverseAge();
+
+</script>
+<script>
+
+        // Define the time units in seconds
+        const SECONDS_PER_BINUTE = 120;
+        const SECONDS_PER_HS = SECONDS_PER_BINUTE * 60;
+        const SECONDS_PER_DAY = SECONDS_PER_HS * 12;
+        const SECONDS_PER_DWEEK = SECONDS_PER_DAY * 6;
+        const SECONDS_PER_DMONTH = SECONDS_PER_DWEEK * 5;
+        const SECONDS_PER_DYEAR = SECONDS_PER_DMONTH * 12;
+        const SECONDS_PER_30DYEAR = SECONDS_PER_DYEAR * 30;
+        const SECONDS_PER_CYCLE = SECONDS_PER_30DYEAR * 30;  // Add a constant for the number of seconds in a Cycle
+
+        // Define the EPOCH as a datetime object
+        const EPOCH = new Date(2022, 8, 23, 6, 0, 0, 0);  // Note: month is 0-indexed
+
+        // Function to convert seconds to decentralized time units
+        function convertToCycleZero(seconds) {
+            let cycles = Math.floor(seconds / SECONDS_PER_CYCLE);
+            seconds %= SECONDS_PER_CYCLE;
+            let dyears = Math.floor(seconds / SECONDS_PER_30DYEAR);
+            seconds %= SECONDS_PER_30DYEAR;
+            let dmonths = Math.floor(seconds / SECONDS_PER_DMONTH);
+            seconds %= SECONDS_PER_DMONTH;
+            const dweeks = (Math.floor(seconds / SECONDS_PER_DWEEK) % 5);
+            seconds %= SECONDS_PER_DWEEK;
+            const days = (Math.floor(seconds / SECONDS_PER_DAY) % 6) ;
+            seconds %= SECONDS_PER_DAY;
+            const hs = (Math.floor(seconds / SECONDS_PER_HS) % 12);  // Wrap the HS value around to 1-12
+            seconds = Math.round(seconds % SECONDS_PER_HS);  // Round the seconds to the nearest integer
+            const binutes = Math.floor(seconds / SECONDS_PER_BINUTE);
+            seconds = Math.round(seconds % SECONDS_PER_BINUTE);  // Round the seconds to the nearest integer
+
+            // Increment dyears and cycles as needed
+            if (dmonths > 11) {
+                dmonths -= 12;
+                dyears++;
+            }
+            if (dyears > 29) {
+                dyears -= 30;
+                cycles++;
+            }
+
+            // Return the decentralized time as a tuple
+            return [cycles, dyears, dmonths, dweeks, days, hs, binutes, seconds];
+        }
+
+        // Function to update the time display
+        function updateTime() {
+            // Get the current time
+            const now = new Date();
+
+            // Calculate the number of seconds since the EPOCH
+            const secondsSinceEpoch = (now - EPOCH) / 1000;
+
+            // Convert the seconds to decentralized time units
+            const time = convertToCycleZero(secondsSinceEpoch);
+
+            // Update the time display
+           
+        
+ document.getElementById('timeplay').textContent = `${time[0]}.${time[1]}.${time[2]}.${time[3]}.${time[4]}@${time[5]}:${time[6]}:${time[7]}`;
+ 
+
+  // Convert the seconds to decentralized time units
+  const [cycles, dyears, dmonths, dweeks, days, hs, binutes, seconds] = convertToCycleZero(secondsSinceEpoch);
+
+  // Use the toLocaleString method to format the time units as numbers without a comma
+  const cyclesFormatted = cycles.toLocaleString();
+  const dyearsFormatted = dyears.toLocaleString();
+  const dmonthsFormatted = dmonths.toLocaleString();
+  const dweeksFormatted = dweeks.toLocaleString();
+  const daysFormatted = days.toLocaleString();
+  const hsFormatted = hs.toLocaleString();
+  const binutesFormatted = binutes.toLocaleString();
+  const secondsFormatted = seconds.toLocaleString();
+    // Update the time display elements
+
+  document.getElementById("cycles").innerHTML = cyclesFormatted;
+  document.getElementById("dyears").innerHTML = dyearsFormatted;
+  document.getElementById("dmonths").innerHTML = dmonthsFormatted;
+  document.getElementById("dweeks").innerHTML = dweeksFormatted;
+  document.getElementById("days").innerHTML = daysFormatted;
+  document.getElementById("hs").innerHTML = hsFormatted;
+  document.getElementById("binutes").innerHTML = binutesFormatted;
+  document.getElementById("seconds").innerHTML = secondsFormatted;
+
+        }
+        // Call the updateTime function every second
+        setInterval(updateTime, 1000);
+</script>
+
+</html>
+</body>
+</html>
