@@ -49,34 +49,10 @@ export default function Header() {
                     <div className="mr-4">
                         <LiveClock format={'HH:mm:ss'} ticking />
                     </div>
-                   
-
-
-
-                    {/* Date Format Selector */}
-                    <div>
-                        <input
-                            type="radio"
-                            id="dateFormat1"
-                            name="dateFormat"
-                            value="yyyy-MM-dd"
-                            checked={dateFormat === 'yyyy-MM-dd'}
-                            onChange={() => setDateFormat('yyyy-MM-dd')}
-                        />
-                        <label htmlFor="dateFormat1">yyyy-MM-dd</label>
-
-                        <input
-                            type="radio"
-                            id="dateFormat2"
-                            name="dateFormat"
-                            value="dd/MM/yyyy"
-                            checked={dateFormat === 'dd/MM/yyyy'}
-                            onChange={() => setDateFormat('dd/MM/yyyy')}
-                        />
-                        <label htmlFor="dateFormat2">dd/MM/yyyy</label>
-
-                        {/* Add more date format options as needed */}
-                    </div>
+                  <div>
+    {/* Display the date in a single field */}
+    <p>{date.toLocaleDateString()}</p>
+</div>
                 </div>
                 <div className="flex text-sm px-2 py-1 rounded-md space-x-4">
                     {/* Render Connect Button */}
