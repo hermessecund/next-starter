@@ -17,12 +17,10 @@ export default function Header() {
         setConnected(true);
     };
     return (
-       <div className="relative min-h-screen">
-
-      
- 
-      
-
+       <div className="relative min-h-screen"> 
+        <div className="p-4 mb-0 bg-black text-gray-200 text-center">
+    <iframe src="https://next-starter-rouge-five.vercel.app/days.html" title="Days Iframe" height="70" frameBorder="0" style={{ minWidth: "150px" }}></iframe>
+</div>
     <header className="flex flex-col md:flex-row justify-center items-center p-4 bg-black text-white">
            
         <div className="flex items-center md:order-1">
@@ -48,9 +46,7 @@ export default function Header() {
 
             {/* Main Content */}
             <main className="p-4 bg-black ">
-                <div className="p-4 mb-0 bg-black text-gray-200 text-center">
-    <iframe src="https://next-starter-rouge-five.vercel.app/days.html" title="Days Iframe" height="70" frameBorder="0" style={{ minWidth: "150px" }}></iframe>
-</div>
+              
                 {/* Conditionally render NFT collections if connected */}
                 {connected && (
               
