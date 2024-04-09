@@ -19,29 +19,30 @@ export default function Header() {
     return (
        <div className="relative min-h-screen">
             {/* Header */}
-            <header className="flex flex-col md:flex-row justify-between items-center p-4 bg-black text-white">
-                {/* Iframe on top for mobile */}
-                <div className="order-2 md:order-1 mb-4 md:mb-0"> {/* Order change for mobile */}
-                    <iframe src="https://next-starter-rouge-five.vercel.app/days.html" title="Days Iframe" height="100" frameBorder="0" style={{ minWidth: "200px" }}></iframe>
-                </div>
-                <div className="flex items-center md:order-2">
-                    <button className="mr-4 focus:outline-none">
-                        {/* Small logo */}
-                        <Image src={Logo} alt="Logo" width={102} height={102} />
-                    </button>
-                </div>
-                {/* ConnectButton at the bottom for mobile */}
-                <div className="order-1 md:order-3 mt-4 md:mt-0">
-                    <ConnectButton
-                        client={client}
-                        appMetadata={{
-                            name: "Tar App",
-                            url: "https://tarwar.com",
-                        }}
-                        onConnect={handleConnect}
-                    />
-                </div>
-            </header>
+            <header className="flex flex-col md:flex-row justify-center items-center p-4 bg-black text-white">
+    {/* Iframe on top for mobile */}
+    <div className="order-2 md:order-1 mb-4 md:mb-0"> {/* Order change for mobile */}
+        <iframe src="https://next-starter-rouge-five.vercel.app/days.html" title="Days Iframe" height="100" frameBorder="0" style={{ minWidth: "200px" }}></iframe>
+    </div>
+    <div className="flex items-center md:order-2">
+        <button className="mr-4 focus:outline-none">
+            {/* Small logo */}
+            <Image src={Logo} alt="Logo" width={102} height={102} />
+        </button>
+    </div>
+    {/* ConnectButton at the bottom for mobile */}
+    <div className="order-1 md:order-3 mt-4 md:mt-0">
+        <ConnectButton
+            client={client}
+            appMetadata={{
+                name: "Tar App",
+                url: "https://tarwar.com",
+            }}
+            onConnect={handleConnect}
+        />
+    </div>
+</header>
+
 
             {/* Main Content */}
             <main className="p-4 bg-black ">
