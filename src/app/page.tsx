@@ -1,7 +1,7 @@
 'use client'
 import Image from "next/image";
 import { client } from "./client";
-import Footer from "./timevf";
+
 import Logo from "@public/logo.png";
 import { ConnectButton } from "@/app/thirdweb";
 import NavLinks from "./nav";
@@ -15,20 +15,7 @@ import Calendar from 'react-calendar';
 
 export default function Header() {
     const [connected, setConnected] = useState(false);
-    const [date, setDate] = useState(new Date());
-    
-    const [dateFormat, setDateFormat] = useState('yyyy-MM-dd'); // Default date format
-
-    
-        useEffect(() => {
-            // Update date every second
-            const interval = setInterval(() => {
-                setDate(new Date());
-            }, 1000);
-    
-            // Clear interval on unmount
-            return () => clearInterval(interval);
-        }, []);
+   
 
     // Function to handle connection to Thirdweb
     const handleConnect = () => {
@@ -48,6 +35,7 @@ export default function Header() {
                     </button>
                   
                 </div>
+                 <iframe src="https://next-starter-rouge-five.vercel.app/long.html" title="Long format Iframe" width="100%" height="150px" frameBorder="0"></iframe>
                 <div className="flex text-sm px-2 py-1 rounded-md space-x-4">
                     {/* Render Connect Button */}
                  
@@ -173,8 +161,8 @@ export default function Header() {
             </main>
 
             {/* Footer */}
-            <footer className="p-4 mb-0 bg-black text-gray-200 text-center">
-                  <Footer />
+            <fooeter className="p-4 mb-0 bg-black text-gray-200 text-center">
+              <iframe src="https://next-starter-rouge-five.vercel.app/days.html" title="Days Iframe" width="100%" height="300px" frameBorder="0"></iframe>
             </footer>
         </div>
     );
