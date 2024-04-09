@@ -48,8 +48,9 @@ export default function Header() {
 
             {/* Main Content */}
             <main className="p-4 bg-black ">
+                <div className="p-4 mb-0 bg-black text-gray-200 text-center">
     <iframe src="https://next-starter-rouge-five.vercel.app/days.html" title="Days Iframe" height="70" frameBorder="0" style={{ minWidth: "150px" }}></iframe>
-
+</div>
                 {/* Conditionally render NFT collections if connected */}
                 {connected && (
               
