@@ -8,10 +8,6 @@ import NavLinks from "./nav";
 import { useState, useEffect } from 'react';
 import Icons from "./icons";
 
-
-
-
-
 export default function Header() {
     const [connected, setConnected] = useState(false);
 
