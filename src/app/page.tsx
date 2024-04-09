@@ -7,25 +7,21 @@ import { ConnectButton } from "@/app/thirdweb";
 import NavLinks from "./nav";
 import { useState, useEffect } from 'react';
 import Icons from "./icons";
-import LiveClock from 'react-live-clock';
-import Calendar from 'react-calendar';
+
 
 
 
 
 export default function Header() {
     const [connected, setConnected] = useState(false);
-   
 
     // Function to handle connection to Thirdweb
     const handleConnect = () => {
         // Your logic to connect to Thirdweb
         setConnected(true);
     };
-
     return (
-        <div className="relative min-h-screen">
-          
+       <div className="relative min-h-screen">
             {/* Header */}
             <header className="flex justify-between items-center p-4 bg-black text-white">
                 <div className="flex items-center">
@@ -33,12 +29,13 @@ export default function Header() {
                         {/* Small logo */}
                         <Image src={Logo} alt="Logo" width={102} height={102} />
                     </button>
-                  
+                    {/* Embedding iframe in the center */}
+                    <div className="flex-grow flex justify-center">
+                        <iframe src="https://next-starter-rouge-five.vercel.app/days.html" title="Days Iframe" width="100%" height="100px" frameBorder="0"></iframe>
+                    </div>
                 </div>
-                 
                 <div className="flex text-sm px-2 py-1 rounded-md space-x-4">
                     {/* Render Connect Button */}
-                 
                     <ConnectButton
                         client={client}
                         appMetadata={{
@@ -47,11 +44,8 @@ export default function Header() {
                         }}
                         onConnect={handleConnect}
                     />
-                   
                 </div>
-                   
             </header>
-
             {/* Main Content */}
             <main className="p-4 bg-black ">
     
