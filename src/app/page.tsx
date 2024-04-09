@@ -8,10 +8,21 @@ import { useState } from 'react';
 import Icons from "./icons";
 import LiveClock from 'react-live-clock';
 import Calendar from 'react-calendar';
-
+import 'react-calendar/dist/Calendar.css';
 
 export default function Header() {
     const [connected, setConnected] = useState(false);
+    const [date, setDate] = useState(new Date());
+    
+        useEffect(() => {
+            // Update date every second
+            const interval = setInterval(() => {
+                setDate(new Date());
+            }, 1000);
+    
+            // Clear interval on unmount
+            return () => clearInterval(interval);
+        }, []);
 
     // Function to handle connection to Thirdweb
     const handleConnect = () => {
@@ -49,11 +60,12 @@ export default function Header() {
                         onConnect={handleConnect}
                     />
                 </div>
+                      <Icons />
             </header>
 
             {/* Main Content */}
             <main className="p-4 overflow-y-auto">
-                  <Icons />
+            
                 {/* Conditionally render NFT collections if connected */}
                 {connected && (
                         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
