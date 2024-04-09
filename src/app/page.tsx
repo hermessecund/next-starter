@@ -49,6 +49,7 @@ export default function Header() {
                 </div>
                 <div className="flex text-sm px-2 py-1 rounded-md space-x-4">
                     {/* Render Connect Button */}
+                      <p><LiveClock format={'HH:mm:ss'} ticking /></p>
                     <ConnectButton
                         client={client}
                         appMetadata={{
@@ -57,17 +58,14 @@ export default function Header() {
                         }}
                         onConnect={handleConnect}
                     />
+                     <p>{date.toLocaleDateString()}</p>
                 </div>
                    
             </header>
 
             {/* Main Content */}
-            <main className="p-4 ">
-        {/* Live Clock */}
-                    <div className="mr-4">
-                       <p><LiveClock format={'HH:mm:ss'} ticking /></p>
-                         <p>{date.toLocaleDateString()}</p>
-                    </div>
+            <main className="p-4 bg-black ">
+    
 
                 {/* Conditionally render NFT collections if connected */}
                 {connected && (
@@ -174,7 +172,7 @@ export default function Header() {
             </main>
 
             {/* Footer */}
-            <footer className="p-4 mb-0 bg-gray-700 text-gray-200 text-center">
+            <footer className="p-4 mb-0 bg-black text-gray-200 text-center">
                 &copy; 2024 Tar App. All rights reserved.
             </footer>
         </div>
