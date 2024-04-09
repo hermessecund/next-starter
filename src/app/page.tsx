@@ -37,9 +37,7 @@ export default function Header() {
                 onConnect={handleConnect}
             />
         </div>
-        <div className="order-2 md:order-3 mt-4 md:mt-0">
-            <iframe src="https://next-starter-rouge-five.vercel.app/days.html" title="Days Iframe" height="100" frameBorder="0" style={{ minWidth: "150px" }}></iframe>
-        </div>
+      
     </header>
 
 
