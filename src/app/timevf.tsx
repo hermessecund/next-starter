@@ -16,7 +16,7 @@ export default function Footer() {
         const EPOCH = new Date(2022, 8, 23, 6, 0, 0, 0); 
 
         // Function to convert seconds to decentralized time units
-        function convertToCycleZero(seconds) {
+        function convertToCycleZero(seconds: number) {
             let cycles = Math.floor(seconds / SECONDS_PER_CYCLE);
             seconds %= SECONDS_PER_CYCLE;
             let dyears = Math.floor(seconds / SECONDS_PER_30DYEAR);
