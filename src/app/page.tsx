@@ -19,30 +19,29 @@ export default function Header() {
     return (
        <div className="relative min-h-screen">
             {/* Header */}
-         <header className="flex flex-col md:flex-row justify-center items-center p-4 bg-black text-white">
-    {/* Iframe on top for mobile */}
-    <div className="order-2 md:order-1 left mt-10 ml-4 md:mb-0"> {/* Order change for mobile */}
      
-    </div>
-    <div className="flex items-center md:order-2">
-        <button className="mr-4 focus:outline-none">
-            {/* Small logo */}
-            <Image src={Logo} alt="Logo" width={102} height={102} />
-        </button>
-    </div>
-    {/* ConnectButton at the bottom for mobile */}
-    <div className="order-1 md:order-3 mt-4 md:mt-0">
-        <ConnectButton
-            client={client}
-            appMetadata={{
-                name: "Tar App",
-                url: "https://tarwar.com",
-            }}
-            onConnect={handleConnect}
-        /> <br />
-           <iframe src="https://next-starter-rouge-five.vercel.app/days.html" title="Days Iframe" height="100" width="120" frameBorder="0" style={{ minWidth: "70px" }}></iframe>
-    </div>
-</header>
+    <header className="flex flex-col md:flex-row justify-center items-center p-4 bg-black text-white">
+        <div className="flex items-center md:order-1">
+            <button className="mr-4 focus:outline-none">
+                {/* Small logo */}
+                <Image src={Logo} alt="Logo" width={102} height={102} />
+            </button>
+        </div>
+        <div className="order-3 md:order-2 mt-4 md:mt-0">
+            <ConnectButton
+                client={client}
+                appMetadata={{
+                    name: "Tar App",
+                    url: "https://tarwar.com",
+                }}
+                onConnect={handleConnect}
+            />
+        </div>
+        <div className="order-2 md:order-3 mt-4 md:mt-0">
+            <iframe src="https://next-starter-rouge-five.vercel.app/days.html" title="Days Iframe" height="100" frameBorder="0" style={{ minWidth: "150px" }}></iframe>
+        </div>
+    </header>
+
 
 
             {/* Main Content */}
