@@ -19,7 +19,8 @@ export default function Header() {
     return (
        <div className="relative min-h-screen"> 
         <div className="p-4 mb-0 bg-black text-gray-200 text-center">
-    <iframe src="https://next-starter-rouge-five.vercel.app/days.html" title="Days Iframe" height="70" frameBorder="0" style={{ minWidth: "150px" }}></iframe>
+     <iframe src="https://next-starter-rouge-five.vercel.app/days.html" title="Days format" width="100%" height="50px" frameBorder="0"></iframe>
+        
 </div>
     <header className="flex flex-col md:flex-row justify-center items-center p-4 bg-black text-white">
            
@@ -154,7 +155,7 @@ export default function Header() {
 
             {/* Footer */}
             <footer className="p-4 mb-0 bg-black text-gray-200 text-center">
-              <iframe src="https://next-starter-rouge-five.vercel.app/long.html" title="Days Iframe" width="100%" height="300px" frameBorder="0"></iframe>
+              <iframe src="https://next-starter-rouge-five.vercel.app/long.html" title="Long format" width="100%" height="300px" frameBorder="0"></iframe>
             </footer>
         </div>
     );
