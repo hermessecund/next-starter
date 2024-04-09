@@ -6,6 +6,8 @@ import { ConnectButton } from "@/app/thirdweb";
 import NavLinks from "./nav";
 import { useState } from 'react';
 import Icons from "./icons";
+import LiveClock from 'react-live-clock';
+import Calendar from 'react-calendar';
 
 
 export default function Header() {
