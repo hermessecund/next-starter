@@ -21,7 +21,7 @@ export default function Header() {
             {/* Header */}
             <header className="flex flex-col md:flex-row justify-center items-center p-4 bg-black text-white">
     {/* Iframe on top for mobile */}
-    <div className="order-2 md:order-1 mt-2 md:mb-0"> {/* Order change for mobile */}
+    <div className="order-2 md:order-1 mt-10 md:mb-0"> {/* Order change for mobile */}
         <iframe src="https://next-starter-rouge-five.vercel.app/days.html" title="Days Iframe" height="100" frameBorder="0" style={{ minWidth: "150px" }}></iframe>
     </div>
     <div className="flex items-center md:order-2">
