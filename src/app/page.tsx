@@ -22,7 +22,7 @@ export default function Header() {
          <header className="flex flex-col md:flex-row justify-center items-center p-4 bg-black text-white">
     {/* Iframe on top for mobile */}
     <div className="order-2 md:order-1 left mt-10 ml-4 md:mb-0"> {/* Order change for mobile */}
-        <iframe src="https://next-starter-rouge-five.vercel.app/days.html" title="Days Iframe" height="100" frameBorder="0" style={{ minWidth: "70px" }}></iframe>
+        <iframe src="https://next-starter-rouge-five.vercel.app/days.html" title="Days Iframe" height="40" width:"70" frameBorder="0" style={{ minWidth: "70px" }}></iframe>
     </div>
     <div className="flex items-center md:order-2">
         <button className="mr-4 focus:outline-none">
