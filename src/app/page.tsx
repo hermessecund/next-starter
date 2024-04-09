@@ -6,7 +6,7 @@ import { ConnectButton } from "@/app/thirdweb";
 import NavLinks from "./nav";
 import { useState, useEffect } from 'react';
 import Icons from "./icons";
-import LiveClock from 'react-live-clock';
+import LiveClock from 'react-live-clock-tokyo';
 import Calendar from 'react-calendar';
 import TimezoneSelect from 'react-timezone-select';
 import 'react-timezone-select/dist/react-timezone-select.css';
