@@ -19,7 +19,7 @@ export default function Header() {
 
     return (
         <div className="relative min-h-screen">
-            <Icons />
+          
             {/* Header */}
             <header className="flex justify-between items-center p-4 bg-black text-white">
                 <div className="flex items-center">
@@ -43,6 +43,7 @@ export default function Header() {
 
             {/* Main Content */}
             <main className="p-4 overflow-y-auto">
+                  <Icons />
                 {/* Conditionally render NFT collections if connected */}
                 {connected && (
                         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
