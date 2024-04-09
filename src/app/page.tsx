@@ -45,14 +45,7 @@ export default function Header() {
                         {/* Small logo */}
                         <Image src={Logo} alt="Logo" width={102} height={102} />
                     </button>
-                   {/* Live Clock */}
-                    <div className="mr-4">
-                        <LiveClock format={'HH:mm:ss'} ticking />
-                    </div>
-                  <div>
-    {/* Display the date in a single field */}
-    <p>{date.toLocaleDateString()}</p>
-</div>
+                  
                 </div>
                 <div className="flex text-sm px-2 py-1 rounded-md space-x-4">
                     {/* Render Connect Button */}
@@ -69,8 +62,13 @@ export default function Header() {
             </header>
 
             {/* Main Content */}
-            <main className="p-4 overflow-y-auto">
-               <Icons />
+            <main className="p-4 ">
+        {/* Live Clock */}
+                    <div className="mr-4">
+                       <p><LiveClock format={'HH:mm:ss'} ticking /></p>
+                         <p>{date.toLocaleDateString()}</p>
+                    </div>
+
                 {/* Conditionally render NFT collections if connected */}
                 {connected && (
                         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
