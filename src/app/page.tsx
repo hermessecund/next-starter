@@ -4,7 +4,7 @@ import { client } from "./client";
 import Logo from "@public/logo.png";
 import { ConnectButton } from "@/app/thirdweb";
 import NavLinks from "./nav";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Icons from "./icons";
 import LiveClock from 'react-live-clock';
 import Calendar from 'react-calendar';
