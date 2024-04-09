@@ -35,7 +35,7 @@ export default function Header() {
                     </button>
                   
                 </div>
-                 <iframe src="https://next-starter-rouge-five.vercel.app/long.html" title="Long format Iframe" width="100%" height="150px" frameBorder="0"></iframe>
+                 
                 <div className="flex text-sm px-2 py-1 rounded-md space-x-4">
                     {/* Render Connect Button */}
                  
