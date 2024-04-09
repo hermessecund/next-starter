@@ -44,13 +44,15 @@ export default function Footer() {
             return [cycles, dyears, dmonths, dweeks, days, hs, binutes, seconds];
         }
 
-        function updateTime() {
+       function updateTime() {
             const now = new Date();
-            const secondsSinceEpoch = (now - EPOCH) / 1000;
+            const nowTimestamp = now.getTime(); // Get the current timestamp in milliseconds
+            const secondsSinceEpoch = (nowTimestamp - EPOCH.getTime()) / 1000; // Convert to seconds
             const time = convertToCycleZero(secondsSinceEpoch);
-
+        
             document.getElementById('timeplay').textContent = `${time[0]}.${time[1]}.${time[2]}.${time[3]}.${time[4]}@${time[5]}:${time[6]}:${time[7]}`;
         }
+
 
         const intervalId = setInterval(updateTime, 1000);
 
