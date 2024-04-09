@@ -18,14 +18,13 @@ export default function Header() {
     };
     return (
        <div className="relative min-h-screen">
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
-    <div style={{ width: '200px', height: '200px', backgroundColor: 'lightgray' }}>
-        {/* Your content here */}
+
+      
  
-            <iframe src="https://next-starter-rouge-five.vercel.app/days.html" title="Days Iframe" height="70" frameBorder="0" style={{ minWidth: "150px" }}></iframe>
-        </div>
-        </div>
+      
+
     <header className="flex flex-col md:flex-row justify-center items-center p-4 bg-black text-white">
+              <iframe src="https://next-starter-rouge-five.vercel.app/days.html" title="Days Iframe" height="70" frameBorder="0" style={{ minWidth: "150px" }}></iframe>
         <div className="flex items-center md:order-1">
             <button className="mr-4 focus:outline-none">
                 {/* Small logo */}
