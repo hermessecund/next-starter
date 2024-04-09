@@ -8,11 +8,16 @@ import { useState, useEffect } from 'react';
 import Icons from "./icons";
 import LiveClock from 'react-live-clock';
 import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css';
+import TimezoneSelect from 'react-timezone-select';
+import 'react-timezone-select/dist/react-timezone-select.css';
+
 
 export default function Header() {
     const [connected, setConnected] = useState(false);
     const [date, setDate] = useState(new Date());
+     const [timezone, setTimezone] = useState('Asia/Kolkata');
+    const [dateFormat, setDateFormat] = useState('yyyy-MM-dd'); // Default date format
+
     
         useEffect(() => {
             // Update date every second
@@ -40,13 +45,38 @@ export default function Header() {
                         {/* Small logo */}
                         <Image src={Logo} alt="Logo" width={102} height={102} />
                     </button>
-                    {/* Live Clock */}
+                   {/* Live Clock */}
                     <div className="mr-4">
-                        <LiveClock format={'HH:mm:ss'} ticking timezone={'Asia/Kolkata'} />
+                        <LiveClock format={'HH:mm:ss'} ticking timezone={timezone} />
                     </div>
-                    {/* Calendar */}
+                    {/* Timezone Selector */}
+                    <TimezoneSelect
+                        value={timezone}
+                        onChange={(selectedTimezone) => setTimezone(selectedTimezone.value)}
+                    />
+                    {/* Date Format Selector */}
                     <div>
-                        <Calendar />
+                        <input
+                            type="radio"
+                            id="dateFormat1"
+                            name="dateFormat"
+                            value="yyyy-MM-dd"
+                            checked={dateFormat === 'yyyy-MM-dd'}
+                            onChange={() => setDateFormat('yyyy-MM-dd')}
+                        />
+                        <label htmlFor="dateFormat1">yyyy-MM-dd</label>
+
+                        <input
+                            type="radio"
+                            id="dateFormat2"
+                            name="dateFormat"
+                            value="dd/MM/yyyy"
+                            checked={dateFormat === 'dd/MM/yyyy'}
+                            onChange={() => setDateFormat('dd/MM/yyyy')}
+                        />
+                        <label htmlFor="dateFormat2">dd/MM/yyyy</label>
+
+                        {/* Add more date format options as needed */}
                     </div>
                 </div>
                 <div className="flex text-sm px-2 py-1 rounded-md space-x-4">
@@ -60,12 +90,12 @@ export default function Header() {
                         onConnect={handleConnect}
                     />
                 </div>
-                      <Icons />
+                   
             </header>
 
             {/* Main Content */}
             <main className="p-4 overflow-y-auto">
-            
+               <Icons />
                 {/* Conditionally render NFT collections if connected */}
                 {connected && (
                         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
