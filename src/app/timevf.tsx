@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export function Footer() {
+export default function Footer() {
     useEffect(() => {
         // Define the time units in seconds
         const SECONDS_PER_BINUTE = 120;
