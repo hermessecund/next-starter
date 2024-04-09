@@ -50,16 +50,22 @@ export default function Header() {
                         <LiveClock format={'HH:mm:ss'} ticking timezone={timezone} />
                     </div>
                     {/* Timezone Selector */}
-               <TimezoneSelect
+<TimezoneSelect
     value={timezone}
     onChange={(selectedTimezone) => {
-        // Extract the value from the selectedTimezone object
-        const newTimezone = selectedTimezone.value; // Assuming 'value' is the correct property
+        // Log the selectedTimezone object to inspect its structure
+        console.log(selectedTimezone);
+
+        // Update the timezone state with the correct property
+        const newTimezone = selectedTimezone?.value; // Use the correct property name here
         
-        // Update the timezone state with the extracted value
-        setTimezone(newTimezone);
+        // Check if newTimezone is defined before updating the state
+        if (newTimezone) {
+            setTimezone(newTimezone);
+        }
     }}
 />
+
 
 
                     {/* Date Format Selector */}
