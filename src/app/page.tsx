@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { client } from "./client";
 
-import Logo from "@public/hs2.png";
+import Logo from "@public/logo.png";
 import { ConnectButton } from "@/app/thirdweb";
 import NavLinks from "./nav";
 import { useState, useEffect } from 'react';
@@ -17,6 +17,9 @@ export default function Header() {
     };
     return (
           <div className="relative min-h-screen">
+               <div className="absolute inset-0 z-0">
+                <Image src="/hs2.png" alt="Background" layout="fill" objectFit="cover" />
+            </div>
         <div className="p-4 mb-0 bg-black text-gray-200 text-center">
      <iframe src="https://next-starter-rouge-five.vercel.app/days.html" title="Days format" width="100%" height="50px" frameBorder="0"></iframe>
         
