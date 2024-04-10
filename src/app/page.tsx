@@ -27,12 +27,12 @@ const handleMenuClick = (section: string) => {
         <div className="relative min-h-screen">
         
             {/* Iframe */}
-            <div className="p-4 mb-0 bg-black text-gray-200 text-center">
+         <div className="p-4 mb-0 bg-black bg-opacity-50 backdrop-blur-lg text-gray-200 text-center">
                 <iframe src="https://next-starter-rouge-five.vercel.app/days.html" title="Days format" width="100%" height="50px" frameBorder="0"></iframe>
             </div>
 
             {/* Header */}
-            <header className="flex flex-col md:flex-row justify-center items-center p-4 bg-black text-white">
+            <header className="flex flex-col md:flex-row justify-center items-center p-4 bg-black bg-opacity-50 backdrop-blur-lg text-white">
                 <div className="order-3 md:order-2 mt-4 md:mt-0">
                     <ConnectButton
                         client={client}
@@ -46,7 +46,7 @@ const handleMenuClick = (section: string) => {
             </header>
 
             {/* Main Content */}
-            <main className="relative z-5 p-4 bg-black bg-opacity-80">
+            <main className="relative z-5 p-4 bg-black bg-opacity-50 backdrop-blur-lg">
                 {/* Text menu */}
                 <div className="text-white text-lg mb-4">
                     {connected && (
@@ -73,11 +73,11 @@ const handleMenuClick = (section: string) => {
             </main>
 
             {/* Footer */}
-            <footer className="p-4 mb-0 bg-black text-gray-200 text-center">
+            <footer className="p-4 mb-0 bg-black bg-opacity-50 backdrop-blur-lg text-gray-200 text-center">
                 <iframe src="https://next-starter-rouge-five.vercel.app/long.html" title="Long format" width="100%" height="300px" frameBorder="0"></iframe>
                 <br />
                 {/* Logo button */}
-                <button className="mr-4 focus:outline-none">
+                <button className="mr-4 rounded-lg focus:outline-none">
                     <Image src={Logo} alt="Logo" width={102} height={102} />
                 </button>
             </footer>
