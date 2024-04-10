@@ -10,7 +10,6 @@ import Icons from "./icons";
 
 export default function Header() {
     const [connected, setConnected] = useState(false);
-
     // Function to handle connection to Thirdweb
     const handleConnect = () => {
         // Your logic to connect to Thirdweb
@@ -18,9 +17,6 @@ export default function Header() {
     };
     return (
           <div className="relative min-h-screen">
-            {/* Background image */}
-           
-       <div className="relative min-h-screen"> 
         <div className="p-4 mb-0 bg-black text-gray-200 text-center">
      <iframe src="https://next-starter-rouge-five.vercel.app/days.html" title="Days format" width="100%" height="50px" frameBorder="0"></iframe>
         
