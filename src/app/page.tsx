@@ -26,7 +26,6 @@ import Nfts from "./nft";
     return (
         <div>
             {/* Background image container */}
-            <div className="absolute inset-0 z-0 bg-cover bg-center" style={{ backgroundImage: "url('/hs2.png')" }}></div>
             
             <div className="relative bg-red min-h-screen">
              
