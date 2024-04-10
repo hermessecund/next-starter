@@ -49,7 +49,7 @@ import Nfts from "./nft";
                 </header>
 
                 {/* Main Content */}
-                <main className="relative z-5 bg-black bg-opacity-70">
+                <main className="relative z-5 bg-black justify-center items-center bg-opacity-70">
                     {/* Text menu */}   <Nfts />
                     <div className="text-white text-lg mb-4">
                         {connected && (
