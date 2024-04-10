@@ -20,9 +20,13 @@
 	body {
 		@apply bg-zinc-950 text-neutral-200;
 	}
-	iframe {
-  background-color: rgba(255, 255, 255, 0); /* Transparent background */
-  border: none; /* Remove border */
 }
-
+@layer components {
+  .bg-transparent {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  
+  .border-none {
+    border: none;
+  }
 }
