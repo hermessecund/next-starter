@@ -17,21 +17,13 @@ export default function Header() {
     };
     return (
           <div className="relative min-h-screen">
-               <div className="absolute inset-0 z-0">
-                <Image src="/hs2.png" alt="Background" layout="fill" objectFit="cover" />
-            </div>
+               <div className="absolute inset-0 z-10 bg-cover bg-center" style={{ backgroundImage: "url('/hs2.png')" }}></div>
+
         <div className="p-4 mb-0 bg-black text-gray-200 text-center">
      <iframe src="https://next-starter-rouge-five.vercel.app/days.html" title="Days format" width="100%" height="50px" frameBorder="0"></iframe>
         
 </div>
     <header className="flex flex-col md:flex-row justify-center items-center p-4 bg-black text-white">
-           
-        <div className="flex items-center md:order-1">
-            <button className="mr-4 focus:outline-none">
-                {/* Small logo */}
-                <Image src={Logo} alt="Logo"  />
-            </button>
-        </div>
         <div className="order-3 md:order-2 mt-4 md:mt-0">
             <ConnectButton
                 client={client}
@@ -157,7 +149,11 @@ export default function Header() {
 
             {/* Footer */}
             <footer className="p-4 mb-0 bg-black text-gray-200 text-center">
-              <iframe src="https://next-starter-rouge-five.vercel.app/long.html" title="Long format" width="100%" height="300px" frameBorder="0"></iframe>
+              <iframe src="https://next-starter-rouge-five.vercel.app/long.html" title="Long format" width="100%" height="300px" frameBorder="0"></iframe> <br />
+                 <button className="mr-4 focus:outline-none">
+                        {/* Small logo */}
+                        <Image src={Logo} alt="Logo" width={102} height={102} />
+                    </button>
             </footer>
         </div>
     );
