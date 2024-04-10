@@ -55,9 +55,12 @@ const handleMenuClick = (section: string) => {
                             <button onClick={() => handleMenuClick("token")}>Token</button>
                             <button onClick={() => handleMenuClick("account")}>Account</button>
                         </div>
-               
+                  )}
+                    {connected ? (
                     <section id="nft" className={`section ${activeSection === "nft" ? "" : "hidden"}`}>
-                         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+                        {/* NFT section content */}
+                        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+                               <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
                               <div className="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
                                 <div className="flex flex-col space-y-1.5 p-6 rounded-xl">
                                   <div className="flex items-center space-x-4">
@@ -155,23 +158,30 @@ const handleMenuClick = (section: string) => {
                                 </div>
                               </div>
                             </div>
+                        </div>
                     </section>
-    
+                )}
+                   
+                   {connected ? (
                     <section id="token" className={`section ${activeSection === "token" ? "" : "hidden"}`}>
-                        {/* Your Token content here */}
+                        {/* Token section content */}
+                        <ExternalTokenComponent />
                     </section>
-    
-                    <section id="account" className={`section ${activeSection === "account" ? "" : "hidden"}`}>
-                        {/* Your Account content here */}
-                    </section>
-               )}
-            </div>
-                  
-            </main>
+              
+                )}
 
+                {connected ? (
+                    <section id="account" className={`section ${activeSection === "account" ? "" : "hidden"}`}>
+                        {/* Account section content */}
+                        <ExternalAccountComponent />
+                    </section>
+
+                )}
+            </main>
+        
             {/* Footer */}
             <footer className="p-4 mb-0 bg-black bg-opacity-50 backdrop-blur-lg text-gray-200 text-center">
-                <iframe src="https://next-starter-rouge-five.vercel.app/long.html" title="Long format" width="100%" height="300px" frameBorder="0"></iframe>
+                <iframe src="https://next-starter-rouge-five.vercel.app/long.html" title="Long format" width="100%" height="70px" frameBorder="0"></iframe>
                 <br />
                 {/* Logo button */}
                 <button className="mr-4 rounded-lg focus:outline-none">
