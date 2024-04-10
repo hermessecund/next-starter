@@ -27,15 +27,13 @@ const Nfts: React.FC = () => {
                             <h3 className="whitespace-nowrap font-semibold tracking-tight text-2xl">$CGC</h3>
                             <p className="text-muted-foreground text-sm">Supply: 3,214 / 10,000</p>
                         </div>
-                            <div className="p-0 w-full">
-                                <img
-                                    src="/phase2.png"
-                                    height={300}
-                                    alt="NFT"
-                                    className="rounded-b-xl object-cover w-full"
-                                    style={{ aspectRatio: "300/300", objectFit: "cover" }}
-                                />
-                            </div>
+                            <div className="p-0 w-full h-300">
+    <img
+        src="/phase2.png"
+        alt="NFT"
+        className="rounded-b-xl w-full h-full object-cover"
+    />
+</div>
                     </div>
                 </div>
             </div>
