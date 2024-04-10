@@ -29,7 +29,7 @@ import Nfts from "./nft";
             <div className="absolute inset-0 z-0 bg-cover bg-center" style={{ backgroundImage: "url('/hs2.png')" }}></div>
             
             <div className="relative bg-red min-h-screen">
-                
+                <Nfts />
                 {/* Iframe */}
                 <div className=" mt-0 bg-black bg-opacity-50 text-gray-200 text-center">
                     <iframe src="https://next-starter-rouge-five.vercel.app/days.html" title="Days format" width="100%" height="50px" frameBorder="0"></iframe>
