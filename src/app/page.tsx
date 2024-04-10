@@ -188,7 +188,6 @@ const handleMenuClick = (section: string) => {
                     <Image src={Logo} alt="Logo" width={102} height={102} />
                 </button>
             </footer>
-        </div>
      </div>
     );
 }
