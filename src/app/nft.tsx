@@ -3,7 +3,7 @@ import React from 'react';
 const Nfts: React.FC = () => {
     return (
 
-
+     <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
 <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 p-4 rounded-lg border border-gray-200 dark:border-gray-800">
   <div className="flex flex-col gap-2 rounded-lg overflow-hidden">
     <div className="rounded-t-lg overflow-hidden">
@@ -106,7 +106,7 @@ const Nfts: React.FC = () => {
     </div>
   </div>
 </div>
-        
+        </div>
     );
 };
 
