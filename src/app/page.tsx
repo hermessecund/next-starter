@@ -10,6 +10,7 @@ import Icons from "./icons";
 
 export default function Header() {
     const [connected, setConnected] = useState(false);
+    const [activeSection, setActiveSection] = useState("nft"); // Default to "NFT" section
     // Function to handle connection to Thirdweb
     const handleConnect = () => {
         // Your logic to connect to Thirdweb
