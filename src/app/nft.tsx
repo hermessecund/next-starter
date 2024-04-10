@@ -44,7 +44,7 @@ const Nfts: React.FC = () => {
                         <div className="flex flex-col space-y-1.5 p-6 rounded-xl">
                             <div className="flex items-center space-x-4">
                                 <img
-                                    src="/bg.png"
+                                    src="/1s.png"
                                     width={64}
                                     height={64}
                                     alt="NFT"
