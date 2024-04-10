@@ -1,14 +1,9 @@
 'use client'
 import Image from "next/image";
 import { client } from "./client";
-
 import Logo from "@public/logo.png";
 import { ConnectButton } from "@/app/thirdweb";
-
 import { useState, useEffect } from 'react';
-
-
-
 
 export default function Header() {
     const [connected, setConnected] = useState(false);
@@ -25,7 +20,10 @@ const handleMenuClick = (section: string) => {
 };
 
     return (
-         <div className="absolute inset-0 z-0 bg-cover bg-center" style={{ backgroundImage: "url('/hs2.png')" }}></div>
+ <div>
+    {/* Background image container */}
+    <div className="absolute inset-0 z-0 bg-cover bg-center" style={{ backgroundImage: "url('/hs2.png')" }}></div>
+    
         <div className="relative min-h-screen">
         
             {/* Iframe */}
@@ -84,5 +82,6 @@ const handleMenuClick = (section: string) => {
                 </button>
             </footer>
         </div>
+     </div>
     );
 }
