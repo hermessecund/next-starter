@@ -4,9 +4,9 @@ const Nfts: React.FC = () => {
     return (
 
 
-<div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6 p-4 rounded-lg border border-gray-200 dark:border-gray-800">
-  <div class="flex flex-col gap-2 rounded-lg overflow-hidden">
-    <div class="rounded-t-lg overflow-hidden">
+<div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 p-4 rounded-lg border border-gray-200 dark:border-gray-800">
+  <div className="flex flex-col gap-2 rounded-lg overflow-hidden">
+    <div className="rounded-t-lg overflow-hidden">
                              <div className="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
                                 <div className="flex flex-col space-y-1.5 p-6 rounded-xl">
                                   <div className="flex items-center space-x-4">
