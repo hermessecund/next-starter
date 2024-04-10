@@ -65,24 +65,21 @@ import Nfts from "./nft";
                     {/* Sections */}
                     {connected && (
                         <section id="nft" className={`section ${activeSection === "nft" ? "" : "hidden"}`}>
-                            {/* NFT section content */}
-                            <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
-                                {/* Content for NFT section */}
-                            </div>
+                            <Nfts />
                         </section>
                     )}
 
                     {connected && (
                         <section id="token" className={`section ${activeSection === "token" ? "" : "hidden"}`}>
                             {/* Token section content */}
-                            <ExternalTokenComponent />
+                            <Tokens />
                         </section>
                     )}
 
                     {connected && (
                         <section id="account" className={`section ${activeSection === "account" ? "" : "hidden"}`}>
                             {/* Account section content */}
-                            <ExternalAccountComponent />
+                            <Accounts />
                         </section>
                     )}
                 </main>
