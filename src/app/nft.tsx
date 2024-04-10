@@ -28,12 +28,12 @@ const Nfts: React.FC = () => {
                             <p className="text-muted-foreground text-sm">Supply: 3,214 / 10,000</p>
                         </div>
                             <div className="p-0 w-full h-300">
-    <img
-        src="/phase2.png"
-        alt="NFT"
-        className="rounded-b-xl w-full h-full object-cover"
-    />
-</div>
+                            <img
+                                src="/phase2.png"
+                                alt="NFT"
+                                className="rounded-b-xl w-full h-full object-cover"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -44,7 +44,7 @@ const Nfts: React.FC = () => {
                         <div className="flex flex-col space-y-1.5 p-6 rounded-xl">
                             <div className="flex items-center space-x-4">
                                 <img
-                                    src="/placeholder.svg"
+                                    src="/bg.png"
                                     width={64}
                                     height={64}
                                     alt="NFT"
@@ -61,14 +61,12 @@ const Nfts: React.FC = () => {
                             <h3 className="whitespace-nowrap font-semibold tracking-tight text-2xl">$CGC</h3>
                             <p className="text-muted-foreground text-sm">Supply: 3,214 / 10,000</p>
                         </div>
-                        <div className="p-0">
+                        
+                         <div className="p-0 w-full h-300">
                             <img
-                                src="/placeholder.svg"
-                                width={300}
-                                height={300}
+                                src="/1s.png"
                                 alt="NFT"
-                                className="rounded-b-xl object-cover"
-                                style={{ aspectRatio: "300/300", objectFit: "cover" }}
+                                className="rounded-b-xl w-full h-full object-cover"
                             />
                         </div>
                     </div>
