@@ -24,15 +24,15 @@ const handleMenuClick = (section: string) => {
     {/* Background image container */}
     <div className="absolute inset-0 z-0 bg-cover bg-center" style={{ backgroundImage: "url('/hs2.png')" }}></div>
     
-        <div className="relative min-h-screen">
+        <div className="relative bg-red min-h-screen">
         
             {/* Iframe */}
-         <div className="p-4 mb-0 bg-black bg-opacity-50 backdrop-blur-lg text-gray-200 text-center">
+         <div className="p-4 mb-0 bg-black bg-opacity-50 text-gray-200 text-center">
                 <iframe src="https://next-starter-rouge-five.vercel.app/days.html" title="Days format" width="100%" height="50px" frameBorder="0"></iframe>
             </div>
 
             {/* Header */}
-            <header className="flex flex-col md:flex-row justify-center items-center p-4 bg-black bg-opacity-50 backdrop-blur-lg text-white">
+            <header className="flex flex-col md:flex-row justify-center items-center p-4 bg-black bg-opacity-80 text-white">
                 <div className="order-3 md:order-2 mt-4 md:mt-0">
                     <ConnectButton
                         client={client}
@@ -46,7 +46,7 @@ const handleMenuClick = (section: string) => {
             </header>
 
             {/* Main Content */}
-            <main className="relative z-5 p-4 bg-black bg-opacity-50 backdrop-blur-lg">
+            <main className="relative z-5 p-4 bg-black bg-opacity-70 backdrop-blur-lg">
                 {/* Text menu */}
                 <div className="text-white text-lg mb-4">
                     {connected && (
@@ -60,7 +60,104 @@ const handleMenuClick = (section: string) => {
 
                 {/* Sections */}
                 <section id="nft" className={`section ${activeSection === "nft" ? "" : "hidden"}`}>
-                    {/* Your NFT content here */}
+                     <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+                          <div className="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+                            <div className="flex flex-col space-y-1.5 p-6 rounded-xl">
+                              <div className="flex items-center space-x-4">
+                                <img
+                                  src="/placeholder.svg"
+                                  width={64}
+                                  height={64}
+                                  alt="NFT"
+                                  className="rounded-full"
+                                  style={{ aspectRatio: "64/64", objectFit: "cover" }}
+                                />
+                                <div className="grid gap-0.5">
+                                  <h3 className="whitespace-nowrap font-semibold tracking-tight text-base">Cosmic Gateway Collection</h3>
+                                  <p className="text-muted-foreground text-sm">
+                                    The Cosmic Gateway Collection is a set of 10,000 unique intergalactic NFTs.
+                                  </p>
+                                </div>
+                              </div>
+                              <h3 className="whitespace-nowrap font-semibold tracking-tight text-2xl">$CGC</h3>
+                              <p className="text-muted-foreground text-sm">Supply: 3,214 / 10,000</p>
+                            </div>
+                            <div className="p-0">
+                              <img
+                                src="/placeholder.svg"
+                                width={300}
+                                height={300}
+                                alt="NFT"
+                                className="rounded-b-xl object-cover"
+                                style={{ aspectRatio: "300/300", objectFit: "cover" }}
+                              />
+                            </div>
+                          </div>
+                          <div className="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+                            <div className="flex flex-col space-y-1.5 p-6 rounded-xl">
+                              <div className="flex items-center space-x-4">
+                                <img
+                                  src="/placeholder.svg"
+                                  width={64}
+                                  height={64}
+                                  alt="NFT"
+                                  className="rounded-full"
+                                  style={{ aspectRatio: "64/64", objectFit: "cover" }}
+                                />
+                                <div className="grid gap-0.5">
+                                  <h3 className="whitespace-nowrap font-semibold tracking-tight text-base">EtherLegends Collection</h3>
+                                  <p className="text-muted-foreground text-sm">
+                                    The EtherLegends Collection consists of 8,888 digital collectibles inspired by mythology and folklore.
+                                  </p>
+                                </div>
+                              </div>
+                              <h3 className="whitespace-nowrap font-semibold tracking-tight text-2xl">$LEGENDS</h3>
+                              <p className="text-muted-foreground text-sm">Supply: 8,212 / 8,888</p>
+                            </div>
+                            <div className="p-0">
+                              <img
+                                src="/placeholder.svg"
+                                width={300}
+                                height={300}
+                                alt="NFT"
+                                className="rounded-b-xl object-cover"
+                                style={{ aspectRatio: "300/300", objectFit: "cover" }}
+                              />
+                            </div>
+                          </div>
+                          <div className="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+                            <div className="flex flex-col space-y-1.5 p-6 rounded-xl">
+                              <div className="flex items-center space-x-4">
+                                <img
+                                  src="/placeholder.svg"
+                                  width={64}
+                                  height={64}
+                                  alt="NFT"
+                                  className="rounded-full"
+                                  style={{ aspectRatio: "64/64", objectFit: "cover" }}
+                                />
+                                <div className="grid gap-0.5">
+                                  <h3 className="whitespace-nowrap font-semibold tracking-tight text-base">PixelPals Collection</h3>
+                                  <p className="text-muted-foreground text-sm">
+                                    The PixelPals Collection features 5,000 algorithmically generated pixel art characters.
+                                  </p>
+                                </div>
+                              </div>
+                              <h3 className="whitespace-nowrap font-semibold tracking-tight text-2xl">$PPC</h3>
+                              <p className="text-muted-foreground text-sm">Supply: 1,789 / 5,000</p>
+                            </div>
+                            <div className="p-0">
+                              <img
+                                src="/placeholder.svg"
+                                width={300}
+                                height={300}
+                                alt="NFT"
+                                className="rounded-b-xl object-cover"
+                                style={{ aspectRatio: "300/300", objectFit: "cover" }}
+                              />
+                            </div>
+                          </div>
+                        </div>
                 </section>
 
                 <section id="token" className={`section ${activeSection === "token" ? "" : "hidden"}`}>
