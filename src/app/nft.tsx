@@ -1,5 +1,4 @@
 import React from 'react';
-import { CardTitle, CardDescription, CardHeader, CardContent, CardFooter, Card } from "@/components/ui/card"
 
 const Nfts: React.FC = () => {
     return (
