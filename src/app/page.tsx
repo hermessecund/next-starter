@@ -25,10 +25,9 @@ const handleMenuClick = (section: string) => {
 };
 
     return (
+         <div className="absolute inset-0 z-0 bg-cover bg-center" style={{ backgroundImage: "url('/hs2.png')" }}></div>
         <div className="relative min-h-screen">
-            {/* Background image */}
-            <div className="absolute inset-0 z-10 bg-cover bg-center" style={{ backgroundImage: "url('/hs2.png')" }}></div>
-
+        
             {/* Iframe */}
             <div className="p-4 mb-0 bg-black text-gray-200 text-center">
                 <iframe src="https://next-starter-rouge-five.vercel.app/days.html" title="Days format" width="100%" height="50px" frameBorder="0"></iframe>
