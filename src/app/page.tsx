@@ -86,8 +86,7 @@ import Nfts from "./nft";
 
                 {/* Footer */}
                 <footer className=" mb-0 bg-black bg-opacity-50 backdrop-blur-lg text-gray-200 text-center">
-                <iframe className="bg-transparent border-none" src="https://next-starter-rouge-five.vercel.app/long.html" title="Long format" width="100%" height="50px" frameBorder="0"></iframe>
-
+             <iframe className="bg-transparent border-none overflow-hidden" src="https://next-starter-rouge-five.vercel.app/long.html" title="Long format" width="100%" height="50px" frameBorder="0"></iframe>
                 </footer>
             </div>
         </div>
