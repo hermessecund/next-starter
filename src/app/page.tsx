@@ -64,20 +64,20 @@ import Nfts from "./nft";
 
                     {/* Sections */}
                     {connected && (
-                        <section id="nft" className={`section ${activeSection === "nft" ? "" : "hidden"}`}>
+                        <section id="nft" className={`section ${activeSection === "nft" ? "" : "hidden"} w-full`}>
                             <Nfts />
                         </section>
                     )}
 
                     {connected && (
-                        <section id="token" className={`section ${activeSection === "token" ? "" : "hidden"}`}>
+                        <section id="token" className={`section ${activeSection === "token" ? "" : "hidden"} w-full`}>
                             {/* Token section content */}
                             <Tokens />
                         </section>
                     )}
 
                     {connected && (
-                        <section id="account" className={`section ${activeSection === "account" ? "" : "hidden"}`}>
+                        <section id="account" className={`section ${activeSection === "account" ? "" : "hidden"} w-full`}>
                             {/* Account section content */}
                             <Accounts />
                         </section>
@@ -86,12 +86,8 @@ import Nfts from "./nft";
 
                 {/* Footer */}
                 <footer className="p-4 mb-0 bg-black bg-opacity-50 backdrop-blur-lg text-gray-200 text-center">
-                    <iframe src="https://next-starter-rouge-five.vercel.app/long.html" title="Long format" background-color="FFFFFF00"  width="100%" height="50px" frameBorder="0"></iframe>
-                    <br />
-                    {/* Logo button */}
-                    <button className="mr-4 rounded-lg focus:outline-none">
-                        <Image src={Logo} alt="Logo" width={102} height={102} />
-                    </button>
+                    <iframe src="https://next-starter-rouge-five.vercel.app/long.html" title="Long format" background-color="FFFFFF00" border="none"  width="100%" height="50px" frameBorder="0"></iframe>
+                 
                 </footer>
             </div>
         </div>
