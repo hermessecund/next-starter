@@ -10,7 +10,7 @@ const Nfts: React.FC = () => {
                         <div className="flex flex-col space-y-1.5 p-6 rounded-xl">
                             <div className="flex items-center space-x-4">
                                 <img
-                                    src="/placeholder.svg"
+                                    src="/phase1.png"
                                     width={64}
                                     height={64}
                                     alt="NFT"
@@ -29,7 +29,7 @@ const Nfts: React.FC = () => {
                         </div>
                         <div className="p-0">
                             <img
-                                src="/placeholder.svg"
+                                src="/phase2.png"
                                 width={300}
                                 height={300}
                                 alt="NFT"
