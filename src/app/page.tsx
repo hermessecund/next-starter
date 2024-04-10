@@ -41,13 +41,8 @@ export default function Header() {
         </div>
       
     </header>
-
-
-
-            {/* Main Content */}
-            <main className="p-4 bg-black ">
-              
-                {/* Conditionally render NFT collections if connected */}
+      {/* Main Content */}
+           {/* Conditionally render NFT collections if connected */}
                 {connected && (
                 <main className="relative z-5 p-4 bg-black bg-opacity-80">
                 {/* Text menu */}
