@@ -20,9 +20,9 @@ export default function Header() {
         setConnected(true);
     };
 
-    const handleMenuClick = (section) => {
-        setActiveSection(section);
-    };
+const handleMenuClick = (section: string) => {
+    setActiveSection(section);
+};
 
     return (
         <div className="relative min-h-screen">
