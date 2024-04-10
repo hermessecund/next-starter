@@ -31,13 +31,13 @@ import Nfts from "./nft";
             <div className="relative bg-red min-h-screen">
                 
                 {/* Iframe */}
-                <div className="p-4 mb-0 bg-black bg-opacity-50 text-gray-200 text-center">
+                <div className=" mt-0 bg-black bg-opacity-50 text-gray-200 text-center">
                     <iframe src="https://next-starter-rouge-five.vercel.app/days.html" title="Days format" width="100%" height="50px" frameBorder="0"></iframe>
                 </div>
 
                 {/* Header */}
-                <header className="flex flex-col md:flex-row justify-center items-center p-4 bg-black bg-opacity-80 text-white">
-                    <div className="order-3 md:order-2 mt-4 md:mt-0">
+                <header className="flex flex-col md:flex-row justify-center items-center bg-black bg-opacity-80 text-white">
+                    <div className="order-3 md:order-2 mt-0 md:mt-0">
                         <ConnectButton
                             client={client}
                             appMetadata={{
@@ -50,7 +50,7 @@ import Nfts from "./nft";
                 </header>
 
                 {/* Main Content */}
-                <main className="relative z-5 p-4 bg-black bg-opacity-70">
+                <main className="relative z-5 bg-black bg-opacity-70">
                     {/* Text menu */}
                     <div className="text-white text-lg mb-4">
                         {connected && (
