@@ -50,7 +50,7 @@ import Nfts from "./nft";
 
                 {/* Main Content */}
                 <main className="relative z-5 bg-black justify-center items-center bg-opacity-70">
-                    {/* Text menu */}   <Nfts />
+                    {/* Text menu */}  
                     <div className="text-white text-lg mb-4">
                         {connected && (
                             <div className="flex justify-between">
@@ -85,8 +85,7 @@ import Nfts from "./nft";
 
                 {/* Footer */}
                 <footer className=" mb-0 bg-black bg-opacity-50 backdrop-blur-lg text-gray-200 text-center">
-             <iframe className="bg-transparent border-none overflow-hidden" src="https://next-starter-rouge-five.vercel.app/long.html" title="Long format" width="100%" height="70px" frameBorder="0"></iframe>
-                </footer>
+                    </footer>
             </div>
         </div>
     );
